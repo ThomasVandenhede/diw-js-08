@@ -14,7 +14,14 @@
 
         Utilisez l'attribut d'évènement onload, la fonction confirm(), la fonction alert() et un bloc conditionnel if/else.
       */
-
+      var action = function() {
+        var answer = confirm('« Voulez-vous continuer ? »');
+        if (answer) {
+          alert('« Vous avez cliqué sur OK ! »')
+        } else {
+          alert("« Vous avez choisi d'annuler »");
+        }
+      };
       /*
       ** 2 **
         Réalisez le programme (algorithme) suivant :
@@ -34,9 +41,9 @@
       */
     </script>
   </head>
-  <body>
-    <h1>JavaScript : Exercice 14 - confirm 2</h1>
-    <p>Premier paragraphe</p>
+  <body onload="action()">
+    <h1 onmouseover="action()">JavaScript : Exercice 14 - confirm 2</h1>
+    <p onclick="action()">Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
