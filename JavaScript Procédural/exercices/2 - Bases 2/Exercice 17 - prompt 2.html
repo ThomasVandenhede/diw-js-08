@@ -14,9 +14,19 @@
         - Sinon (si l'utilisateur n'a pas cliqué sur Annulé ET n'a pas rien saisi), j'affiche la saisie de l'utilisateur dans une boîte de dialogue
 
       */
+     var handleLoad = function() {
+       var userInput = prompt();
+       if (userInput === null) {
+         alert("« Vous avez annulé la saisie »");
+       } else if (userInput === "") {
+        alert("« Vous n'avez rien saisi »");
+       } else {
+        alert(userInput);
+       }
+     }
     </script>
   </head>
-  <body>
+  <body onclick="handleLoad()">
     <h1>JavaScript : Exercice 17 - prompt 2</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
