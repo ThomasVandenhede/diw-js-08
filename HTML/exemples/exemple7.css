@@ -1,0 +1,41 @@
+body {
+  min-width: 100%;
+}
+
+div {
+  background-color: teal;
+  height: 50px;
+  width: 70%;
+  max-width: 600px;
+  min-width: 400px;
+  margin: 0 0 50px 0;
+  padding: 30px;
+  border: 20px solid yellow;
+  border-radius: 0 30px 90px 0;
+}
+
+img {
+  width: 30%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 40px;
+  border-radius: 80px;
+}
+
+p {
+  background-color: grey;
+  padding: 5px 30px;
+  border-style: solid;
+  border-width: 5px 20px;
+  border-color: red;
+}
+
+footer {
+  width: 150px;
+  height: 150px;
+  background-color: magenta;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 50px green solid;
+}

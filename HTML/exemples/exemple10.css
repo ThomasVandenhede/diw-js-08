@@ -1,0 +1,52 @@
+body {
+    background-color: yellow;
+}
+
+div {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+#element1 {
+    background-color: teal;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    z-index: 2;
+}
+
+#element2 {
+    background-color: magenta;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    z-index: 2;
+}
+
+#element3 {
+    background-color: navy;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+#element4 {
+    background-color: crimson;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: -30px;
+    left: 40px;
+}
+
+span {
+    width: 600px;
+    height: 1200px;
+    background-color: blue;
+    display: block;
+    border-radius: 50%;
+    position: fixed;
+    right: -320px;
+    top: -20px;
+}

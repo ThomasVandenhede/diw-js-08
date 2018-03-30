@@ -1,0 +1,12 @@
+section {
+    display: inline-block;
+
+    h2 {
+        color: grey;
+
+
+        + p {
+            color: red;
+        }
+    }
+}

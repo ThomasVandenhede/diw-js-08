@@ -1,0 +1,104 @@
+/*******************************
+*************GLOBAL*************
+*******************************/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#page {
+  width: 90%;
+  margin-left: 5%;
+  background-color: aquamarine;
+}
+
+header,
+footer {
+  padding: 0 3%;
+}
+
+/*******************************
+*************HEADER*************
+*******************************/
+/*******Titre de la page*******/
+
+
+/**********Navigation**********/
+header h1 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+header ul {
+  padding: 0;
+  text-align: center;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 2%;
+  list-style-type: none;
+  border-bottom: 2px transparent solid;
+  padding-bottom: 3px;
+}
+
+header li:hover {
+  border-bottom-color: navy;
+}
+
+header li:hover a{
+  color: #800040ba;
+}
+
+header a {
+  color: navy;
+  text-decoration: none;
+}
+
+/******************************
+*************CORPS*************
+******************************/
+aside,
+section {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2%;
+}
+
+aside {
+  padding-left: 3%;
+  width: 20%;
+}
+
+aside h3 {
+  margin-top: 0;
+}
+
+aside h3:hover ~ p {
+  font-style: italic;
+}
+
+section {
+  width: 69%;
+  margin-left: 5%;
+  padding-right: 3%;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+section h2:hover + p {
+  font-style: italic;
+}
+
+/*******************************
+*************FOOTER*************
+*******************************/
+footer {
+  padding-bottom: 20px;
+}
+
+footer p {
+  margin-bottom: 0;
+}

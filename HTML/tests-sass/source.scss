@@ -1,0 +1,21 @@
+$couleur-de-fond: navy;
+$couleur-texte: whitesmoke;
+$ma-police: Arial, Helvetica, sans-serif;
+
+h1 {
+    color: $couleur-texte;
+    background-color: $couleur-de-fond;
+    text-transform: uppercase;
+    font-family: $ma-police;
+}
+
+p {
+    font-size: 24px;
+    width: (100% / 3);
+
+    span {
+        font-weight: bold;
+        color: $couleur-texte;
+        background-color:$couleur-de-fond;
+    }
+}

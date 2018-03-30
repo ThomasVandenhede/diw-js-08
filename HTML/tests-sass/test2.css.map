@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "test2.css",
+	"sources": [
+		"sources/style.scss",
+		"sources/_variables.scss",
+		"sources/_header.scss",
+		"sources/_section.scss"
+	],
+	"names": [],
+	"mappings": "AEAA;;EAEE;AACF,AAAA,EAAE,CAAC;EACC,KAAK,EDJY,OAAO;ECKxB,SAAS,EAAE,GAAG,GAKjB;EAPD,AAII,EAJF,AAIG,MAAM,CAAC;IACJ,KAAK,EAAE,IAAI,GACd;;ACTL,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,YAAY,GAUxB;EAXD,AAGI,OAHG,CAGH,EAAE,CAAC;IACC,KAAK,EAAE,IAAI,GAMd;IAVL,AAOQ,OAPD,CAGH,EAAE,GAII,CAAC,CAAC;MACA,KAAK,EAAE,GAAG,GACb"
+}

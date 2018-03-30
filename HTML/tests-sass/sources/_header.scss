@@ -1,0 +1,13 @@
+/*
+Titre principal
+*/
+h1 {
+    color: $couleur-principale;
+    font-size: 3em;
+
+    &:hover {
+        color: blue;
+    }
+}
+
+//Je dois continuer mon travail

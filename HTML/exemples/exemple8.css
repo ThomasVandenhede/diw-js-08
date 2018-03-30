@@ -1,0 +1,21 @@
+div {
+  color: #fff;
+  font-size: 18px;
+  max-height: 110px;
+}
+
+#un {
+  background-color: blue;
+}
+
+#deux {
+  background-color: teal;
+  overflow: hidden;
+}
+
+#image {
+  height: 160px;
+  width: 220px;
+  border-radius: 40px;
+  overflow: hidden;
+}

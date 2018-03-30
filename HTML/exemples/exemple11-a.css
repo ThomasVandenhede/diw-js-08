@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+#page {
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+}
+
+aside {
+  position: absolute;
+  width: 20%;
+}
+
+section {
+  margin-left: 22%;
+}
+
+footer {
+  clear: both;
+}

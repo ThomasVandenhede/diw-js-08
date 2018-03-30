@@ -1,0 +1,17 @@
+/*
+Titre principal
+*/
+h1 {
+  color: magenta;
+  font-size: 3em; }
+  h1:hover {
+    color: blue; }
+
+section {
+  display: inline-block; }
+  section h2 {
+    color: grey; }
+    section h2 + p {
+      color: red; }
+
+/*# sourceMappingURL=test2.css.map */
