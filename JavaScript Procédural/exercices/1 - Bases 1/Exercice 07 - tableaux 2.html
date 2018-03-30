@@ -20,12 +20,14 @@
         Ajoutez les deux derniers jours de la semaine au tableau et affichez le dernier indice du tableau dans une boîte de dialogue.
       */
       var unSimpleTableau = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'];
-
+      unSimpleTableau[5] = 'samedi'; // unSimpleTableau.push('samedi')
+      unSimpleTableau[6] = 'dimanche'; // unSimpleTableau.push('dimanche')
       /*
       ** 2 **
         Ajoutez une nouvelle entrée au tableau contenant le premier et le dernier jour de la semaine séparés par un tiret (utilisez une concaténation).
       */
-
+      unSimpleTableau[7] = unSimpleTableau[0] + '-' + unSimpleTableau[6];
+      console.log(unSimpleTableau);
     </script>
   </head>
   <body>
