@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8"/>
     <title>JavaScript : Exercice 9 - fonction</title>
+    <script src="Exercice 09.js"></script>
     <script type="text/javascript">
       /*********************************
       ********** PRÉSENTATION **********
       **********************************
         Dans la programmation en JavaScript, on prend l'habitude de déclarer une function dans l'en-tête ainsi :
       */
-      var maFonction = function() {
-        alert('La fonction alert est déclenchée dans la fonction contenue dans la variable maFonction');
-      };
       /*
         Cette fonction est, désormais, stoquée en mémoire vive et, de ce fait, disponible dans l'emplacement (la variable) maFonction. À partir de la ligne de la déclaration, maFonction peut être utilisée partout dans le document dans les emplacements réservés aux scripts JavaScript.
 
@@ -27,12 +25,12 @@
       ** 1 **
         Exécutez la fonction maFonction ici (c'est à dire après ce commentaire).
       */
-
+      maFonction();
       /*
       ** 2 **
         Exécutez la fonction maFonction AU moment où l'utilisateur clique sur le premier paragraphe. Il faut utiliser l'attribut d'évenement onclick.
       */
-
+      // OK !
       /*
       ** 3 **
         Exécutez la fonction maFonction APRÈS le chargement du document. Il faut utiliser l'attribut d'événement onload.
@@ -47,9 +45,12 @@
       */
     </script>
   </head>
-  <body>
+  <body onload="maFonction()">
     <h1>JavaScript : Exercice 9 - fonction</h1>
-    <p>Premier paragraphe</p>
+    <p onclick="maFonction()">Premier paragraphe</p>
+    <script>
+      maFonction();
+    </script>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
