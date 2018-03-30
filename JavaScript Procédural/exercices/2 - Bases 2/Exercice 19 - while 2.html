@@ -51,9 +51,17 @@
 
         Utilisez la boucle while avec un compteur ainsi que la fonction alert().
       */
+     var handleLoad = function() {
+       var arr = ['a', 'b', 'c'];
+       var index = 0;
+       while (index < arr.length) {
+         alert(arr[index]);
+         index++;
+       }
+     }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 19 - while 2</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
