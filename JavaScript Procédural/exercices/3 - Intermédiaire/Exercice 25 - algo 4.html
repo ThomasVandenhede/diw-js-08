@@ -16,12 +16,26 @@
         _ La fonction prend en argument le message qui s'affichera à l'utilisateur lors de la saisie.
         _ La fonction retourne le nombre saisi par l'utilisateur.
       */
+      const forceNumberInput = (message) => {
+        let userInput;
+        while (isNaN(userInput)) {
+          userInput = parseFloat(prompt(message));
+        }
+        return userInput;
+      }
+
+      const handleClick = () => {
+        let number1, number2;
+        number1 = forceNumberInput("Entrez un 1er nombre...");
+        number2 = forceNumberInput("Entrez un 2nd nombre...");
+        alert(number1 + number2);
+      }
     </script>
   </head>
   <body>
     <h1>JavaScript : Exercice 25 - algo 4</h1>
     <p>Premier paragraphe</p>
-    <p>Deuxième paragraphe</p>
+    <p onclick="handleClick()">Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
     </noscript>
