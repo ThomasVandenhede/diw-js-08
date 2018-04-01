@@ -20,11 +20,22 @@
 
         Utilisez l'attribut d'évènement onclick, la fonction prompt(), la fonction alert() et la boucle while.
       */
+      const handleClick = () => {
+        let userInput1, userInput2;
+        while (!userInput1) {
+          userInput1 = prompt();
+        }
+
+        while (!userInput2) {
+          userInput2 = prompt();
+        }
+        alert(userInput1 + userInput2); // si l'utilisateur saisit 2 chiffres, affiche la somme
+      }
     </script>
   </head>
   <body>
     <h1>JavaScript : Exercice 21 - prompt 4</h1>
-    <p>Premier paragraphe</p>
+    <p onclick="handleClick()">Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
