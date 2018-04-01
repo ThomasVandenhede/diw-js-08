@@ -28,7 +28,10 @@
 
         Utilisez l'attribut d'évènement onload(), la fonction prompt(), la fonction alert() et la fonction parseFloat().
       */
-
+      let handleLoad = () => {
+        let userInput = prompt();
+        alert(parseFloat(userInput));
+      }
       /*
       ** 2 **
         Améliorez le programme (algorithme) précédent :
@@ -39,7 +42,10 @@
 
         Utilisez l'attribut d'évènement onload(), la fonction prompt(), la fonction alert(), la fonction parseFloat() et la fonction isNaN().
       */
-
+      handleLoad = () => {
+        let userInput = prompt();
+        alert(isNaN(parseFloat(userInput)));
+      }
       /*
       ** 3 **
         Réalisez le programme (algorithme) suivant :
@@ -49,11 +55,19 @@
 
         Utilisez l'attribut d'évènement onclick, la fonction prompt(), la fonction alert(), la fonction parseFloat(), la fonction isNaN() et un bloc conditionnel if/else.
       */
+      const handleClick = () => {
+        const userInput = prompt("Veuillez saisir un nombre");
+        if (isNaN(parseFloat(userInput))) {
+          alert("« Vous devez saisir un nombre »");
+        } else {
+          alert("« Merci d'avoir saisi un nombre »");
+        }
+      }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>cript : Exercice 22 - algo - parseFloat - isNaN</h1>
-    <p>Premier paragraphe</p>
+    <p onclick="handleClick()">Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
