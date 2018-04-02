@@ -13,9 +13,15 @@
 
         Utilisez l'attribut d'évènement onload, la fonction prompt(), la fonction parseFloat(), la fonction isNaN() et une boucle while.
       */
+      const handleLoad = () => {
+        var userInput;
+        while (isNaN(userInput)) {
+          userInput = parseFloat(prompt("Saisissez un nombre"));
+        }
+      }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 23 - algo 2</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>

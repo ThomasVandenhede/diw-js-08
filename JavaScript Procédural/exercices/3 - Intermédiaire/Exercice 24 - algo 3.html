@@ -13,12 +13,22 @@
 
         Utilisez l'attribut d'évènement onclick, la fonction prompt(), la fonction alert(), la fonction parseFloat(), la fonction isNaN() et des boucles while.
       */
+      const handleClick = () => {
+        var userInput1, userInput2;
+        while (isNaN(userInput1)) {
+          userInput1 = parseFloat(prompt());
+        }
+        while (isNaN(userInput2)) {
+          userInput2 = parseFloat(prompt());
+        }
+        alert(userInput1 + userInput2);
+      }
     </script>
   </head>
   <body>
     <h1>JavaScript : Exercice 24 - algo 3</h1>
     <p>Premier paragraphe</p>
-    <p>Deuxième paragraphe</p>
+    <p onclick="handleClick()">Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
     </noscript>
