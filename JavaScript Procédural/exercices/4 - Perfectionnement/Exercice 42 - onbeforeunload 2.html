@@ -17,9 +17,16 @@
 
         Pensez à désactiver le bloqueur de PopUp de votre navigateur pour faire vos tests.
       */
+      const openPopUps = () => {
+        open('Exercice 42 - onbeforeunload 2.html');
+        open('Exercice 42 - 1.html', 'Page 1');
+        open('Exercice 42 - 2.html', 'Page 2');
+        open('Exercice 42 - 3.html', 'Page 3');
+        open('Exercice 42 - 4.html', 'Page 4');
+      }
     </script>
   </head>
-  <body>
+  <body onload="open('Exercice 42 - 1.html', 'Page 1');" onbeforeunload="openPopUps();">
     <h1>Mon nouveau document</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
