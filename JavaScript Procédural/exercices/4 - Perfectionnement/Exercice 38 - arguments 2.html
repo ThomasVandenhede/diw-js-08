@@ -9,7 +9,14 @@
       **********************************
         Réécrivez l'exercice précédent en utilisant une boucle for (avec tableau['length']);
       */
-
+      const getAverage = function() {
+        let total = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          total = total + arguments[i];
+        }
+        return total / arguments.length;
+      }
+      alert(getAverage(10, 5, 15, 10));
     </script>
   </head>
   <body>
