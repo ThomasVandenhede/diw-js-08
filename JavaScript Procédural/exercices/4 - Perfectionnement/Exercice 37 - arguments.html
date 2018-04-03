@@ -24,7 +24,16 @@
         Créez une fonction acceptant un nombre variable d'arguments en entrée. Cette fonction calcule la moyenne des valeurs passées en entrée au moyen d'une boucle while et retourne cette valeur.
         Affichez dans une boîte de dialogue la moyenne d'au-moins quatre nombre entiers.
       */
-
+      const getAverage = function() {
+        let counter = 0;
+        let total = 0;
+        while (arguments[counter]) {
+          total = total + arguments[counter];
+          counter = counter + 1;
+        }
+        return total / counter;
+      }
+      alert(getAverage(1, 2, 10, 3));
     </script>
   </head>
   <body>
