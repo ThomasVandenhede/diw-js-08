@@ -23,6 +23,14 @@
 
         L'opérateur % (modulo) permet de calculer le reste des divisions successive du premier opérande par le second (ex: 10 % 2 donne 0, 10 % 3 donne 1)
       */
+      const isLeapYear = (year) => {
+        return !!((!(year % 4) && year % 100) || !(year % 400));
+      }
+      console.log(isLeapYear(1900));
+      console.log(isLeapYear(2000));
+      console.log(isLeapYear(1200));
+      console.log(isLeapYear(444));
+      console.log(isLeapYear(441));
     </script>
   </head>
   <body>
