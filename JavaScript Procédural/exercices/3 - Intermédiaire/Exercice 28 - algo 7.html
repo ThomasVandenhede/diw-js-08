@@ -14,9 +14,27 @@
 
         Utilisez l'attribut d'évènement onload, la fonction prompt(), une boucle for, des boucles while et la fonction alert().
       */
+      const getUserText = () => {
+        let userInput;
+        while (!userInput || !isNaN(parseFloat(userInput))) {
+          userInput = prompt('Saisissez du texte (pas un nombre)');
+        }
+        return userInput;
+      }
+
+      const handleLoad = () => {
+        var userInput, willGetInput = true, textArr = [];
+        while (willGetInput) {
+          textArr.push(getUserText());
+          willGetInput = confirm("Voulez-vous faire une autre saisie ?");
+        }
+        for (let i = 0; i < textArr.length; i++) {
+          alert(textArr[i]);
+        }
+      }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 28 - algo 7</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
