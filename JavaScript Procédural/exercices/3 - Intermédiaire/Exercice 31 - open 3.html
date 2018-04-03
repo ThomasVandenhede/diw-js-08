@@ -14,11 +14,26 @@
           - Si l'utilisateur saisit un texte, ce texte est utilisé comme URL pour ouvrir une nouvelle fenêtre.
           - Sinon un message s'affiche dans une boîte de dialogue avec le texte : « Tant pis ! ».
       */
+      const handleClick = () => {
+        let goToGoogle, userUrl;
+        goToGoogle = confirm("Voulez-vous aller sur Google ?");
+        if (goToGoogle) {
+          open('http://www.google.com', 'Google');
+        } else {
+          userUrl = prompt();
+
+          if (userUrl) {
+            open(userUrl, 'User Url');
+          } else {
+            alert('Tant pis !');
+          }
+        }
+      }
     </script>
   </head>
   <body>
     <h1>JavaScript : Exercice 31 - open 3</h1>
-    <p>Premier paragraphe</p>
+    <p onclick="handleClick()">Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
