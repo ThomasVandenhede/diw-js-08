@@ -19,6 +19,20 @@
         Affichez le contenu de cette variable dans une boîte de dialogue
         Que se passe-t-il si je fais précéder, dans la fonction, le nom de la variable par le mot-clé var ? Pourquoi ?
       */
+      let userInput;
+      
+      while (!userInput) {
+        userInput = prompt();
+      }
+
+      const getInput = () => {
+        var userInput = undefined; // quand le mot clé var est utilisé dans le corps de la fonction, la variable userInput est locale à la fonction
+        while (!userInput) {
+          userInput = prompt();
+        }
+      }
+      getInput();
+      alert(userInput);
     </script>
   </head>
   <body>
