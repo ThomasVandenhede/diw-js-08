@@ -17,11 +17,25 @@
         _ s'il répond vendredi, vous affichez une troisième réponse.
         _ s'il répond samedi ou dimanche, vous affichez une quatrième réponse.
       */
+      const handleLoad = () => {
+        let day;
+        while (isNaN(day) || day < 1 || day > 7) {
+          day = parseInt(prompt('Quel jour de la semaine êtes-vous né ? (1 - 7)'));
+        }
 
-
+        if (day === 1) {
+            alert("Vous êtes né en début de semaine");
+        } else if (day > 1 && day < 5) {
+            alert("Vous êtes né en milieu de semaine");
+        } else if (day === 5) {
+            alert("Vous êtes né un vendredi");
+        } else {
+            alert("Vous êtes né un weekend");
+        }
+      }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 43 - parseInt</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
