@@ -12,6 +12,19 @@
         Tant que l'ensemble du tableau n'a pas été parcouru, utilisez l'url contenue dans la case du tableau sur laquelle vous vous trouvez pour ouvrir une nouvelle fenêtre.
         Utilisez une boucle while... avec un compteur de tours.
       */
+      let counter = 0;
+      const urls = [
+        'www.google.com',
+        'www.medium.com',
+        'www.outlook.com',
+        'www.openclassrooms.com',
+        'www.ulule.com',
+      ]
+
+      while (counter < urls.length) {
+        open('http://' + urls[counter], urls[counter]);
+        counter = counter + 1;
+      }
     </script>
   </head>
   <body>
