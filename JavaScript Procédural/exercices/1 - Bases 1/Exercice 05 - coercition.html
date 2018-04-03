@@ -18,7 +18,11 @@
         - Concaténez cette variable avec la troisième (nombre) et affichez le résultat avec la fonction alert().
         Quel résultat obtenez-vous ? Pourquoi ?
       */
-
+      var text = "Vive JS !", number1 = 3, number2 = 5, sum, newText;
+      sum = number1 + number2; // les deux nombres s'additionnent
+      alert(text + sum); // on affiche la concaténation du texte et de la somme des deux nomtres
+      newText = text + number1; // on concatène le texte et le premier chiffre
+      alert(newText + number2); // on affiche le résultat de la concaténation du nouveau texte et du second nombre converti (implicitement) en chaîne de caractères
     </script>
   </head>
   <body>

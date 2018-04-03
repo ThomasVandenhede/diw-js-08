@@ -26,9 +26,15 @@
 
         Utilisez l'attribut d'évenement onload, la fonction confirm() , la fonction alert() et une boucle while.
       */
+     var handleLoad = function() {
+       var shouldContinue = true;
+       while (shouldContinue) {
+        shouldContinue = confirm('« Voulez-vous continuer ? »');
+       }
+     }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 15 - boucle while</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>

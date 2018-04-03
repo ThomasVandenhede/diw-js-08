@@ -27,12 +27,19 @@
         Créez une fonction ajoutant un nombre à une chaîne de caractère.
         Affichez la valeur de retour dans une boîte de dialogue.
       */
-
+     var addStuffTogether = function(text, number) {
+       alert(text + number);
+     };
+     addStuffTogether('hello', '696969');
       /*
       ** 2 **
         Reprenez la fonction du point 3 de l'exercice précédent.
         Modifiez cette fonction pour récupérer une valeur de retour et l'afficher dans une boîte de dialogue (Bien entendu, vous devez supprimer l'appel à la fonction alert() dans votre fonction).
       */
+      addStuffTogether = function(text, number) {
+       return text + number;
+     };
+     alert(addStuffTogether('so great', '23'));
     </script>
   </head>
   <body>
