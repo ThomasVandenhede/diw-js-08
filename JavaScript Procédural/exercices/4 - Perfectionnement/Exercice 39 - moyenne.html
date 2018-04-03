@@ -11,7 +11,29 @@
         a) Affichez une boîte de dialogue à l'utilisateur lui demande un nombre. Tant qu'il saisit un nombre, demandez-lui un autre nombre nombre. L'ensemble des réponses doit être enregistré dans une seule variable.
         b) Si l'utilisateur a saisi au-moins un nombre, faites la moyenne du/des nombre(s) saisi(s) en utilisant un boucle for.
       */
+      (function() {
+        let numbers = [1, 2, 3];
 
+        const getAverage = function(numbers) {
+          let total = 0;
+          if (numbers.length) {
+            for (let i = 0; i < numbers.length; i++) {
+              total = total + numbers[i];
+            }
+            return total / numbers.length;
+          }
+        }
+
+        while (userInput = parseFloat(prompt("Veuillez saisir un nombre"))) {
+          if (userInput) {
+            numbers.push(userInput);
+          } else {
+            willGetInput = false;
+          }
+        }
+
+        alert(getAverage(numbers));
+      })();
     </script>
   </head>
   <body>
