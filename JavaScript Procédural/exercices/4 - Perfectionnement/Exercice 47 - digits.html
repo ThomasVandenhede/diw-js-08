@@ -13,6 +13,28 @@
 
         Exemple : pour 101, les digits sont 1, 0, 1, il y a donc 3 digits.
       */
+      const countDigits = () => {
+        let number, absolute;
+        let digits = 1;
+        const base = 10;
+
+        while (!number || isNaN(number)) {
+          number = parseInt(prompt('Saisissez un chiffre'));
+        }
+        
+        if (number < 0) {
+          absolute = number * -1;
+        } else {
+          absolute = number;
+        }
+
+        for (let i = 1; absolute > base ** i; i++) {
+          digits = digits + 1;
+        }
+
+        alert("Le nombre " + number + " comporte " + digits + " chiffres");
+      }
+      countDigits();
     </script>
   </head>
   <body>
