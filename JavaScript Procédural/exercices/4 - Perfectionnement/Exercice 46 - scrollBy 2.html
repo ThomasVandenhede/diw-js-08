@@ -3,6 +3,21 @@
   <head>
     <meta charset="utf-8"/>
     <title>JavaScript : Exercice 46 - scrollBy 2</title>
+    <style>
+      div {
+        display: inline-block;
+        position: fixed;
+        right: 10px;
+        padding: .4em;
+        border: 1px solid black;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+      div:nth-of-type(2) {
+        top: 80px;
+      }
+    </style>
     <script type="text/javascript">
       /*********************************
       ************ EXERCICE ************
@@ -10,12 +25,27 @@
         - Stylez les deux div (haut et bas) pour les afficher comme des boutons fixes sur le côté de la page.
         - Au survol des bouton haut ou bas, la page monte ou descend de 10 pixels toutes les 100 millisecondes. Lorsque la souris arrête de survoler le bouton, le mouvement cesse.
       */
+      let intervalIdentifier;
+      const moveUp = () => {
+        intervalIdentifier = setInterval(() => {
+          scrollBy(0, -10);
+        }, 100);
+      }
 
+      const moveDown = () => {
+        intervalIdentifier = setInterval(() => {
+          scrollBy(0, 10);
+        }, 100);
+      }
+
+      const stopScrolling = () => {
+        clearInterval(intervalIdentifier);
+      }
     </script>
   </head>
   <body>
-    <div>Haut</div>
-    <div>Bas</div>
+    <div onmouseover="moveUp()" onmouseout="stopScrolling()">Haut</div>
+    <div onmouseover="moveDown()"  onmouseout="stopScrolling()">Bas</div>
     <h1>JavaScript : Exercice 46 - scrollBy 2</h1>
     <h2>Premier paragraphe :</h2>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
