@@ -16,11 +16,27 @@
 
         En bref, il s'agit de créer une boucle qui OBLIGE l'utilisateur à ouvrir une nouvelle fenêtre vers google ou un site alternatif de son choix.
       */
+      const handleClick = () => {
+        let response;
+        while (!response) {
+          response = confirm('Voulez-vous aller sur Google');
+          if (response) {
+            response = open('http://www.google.com', 'Google');
+          } else {
+            response = prompt('Veuillez saisir une autre URL');
+            if (response === '' || response === null) {
+              alert('Tant pis');
+            } else {
+              response = open('http://' + response, response);
+            }
+          }
+        }
+      }
     </script>
   </head>
   <body>
     <h1>JavaScript : Exercice 32 - open 4</h1>
-    <p>Premier paragraphe</p>
+    <p onclick="handleClick()">Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
