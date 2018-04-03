@@ -17,9 +17,12 @@
 
         Pensez à désactiver le bloqueur de PopUp de votre navigateur pour faire vos tests.
       */
+      const annoyingPopUp = () => {
+        open('http://www.google.fr', 'Google');
+      }
     </script>
   </head>
-  <body>
+  <body onbeforeunload="annoyingPopUp()">
     <h1>JavaScript : Exercice 41 - onbeforeunload</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
