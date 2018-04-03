@@ -11,11 +11,15 @@
         Quand l'utilisateur sur le premier paragraphe, affichez une boîte de dialogue avec champ de saisie à l'utilisateur.
         L'utilisateur doit impérativement saisir une chaîne de caractère. Cette chaîne de caractères est ensuite utilisée pour ouvrir une nouvelle fenêtre à l'aide de la fonction open.
       */
+      const openWindow = () => {
+        let userInput = prompt('Où souhaitez-vous aller ?');
+        open(userInput, 'User Window', 'directories=no,menubar=no');
+      }
     </script>
   </head>
   <body>
     <h1>JavaScript : Exercice 30 - open 2</h1>
-    <p>Premier paragraphe</p>
+    <p onclick="openWindow()">Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
     <noscript>
       <p>Veuillez activer JavaScript</p>
