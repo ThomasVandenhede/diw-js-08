@@ -17,9 +17,24 @@
         Utilisez l'attribut d'évènement onload, la fonction prompt(), une boucle for, une boucle while et la fonction alert().
 
       */
+      const getUserText = () => {
+        let userInput;
+        while (!userInput || !isNaN(parseFloat(userInput))) {
+          userInput = prompt('Saisissez du texte (pas un nombre)');
+        }
+        return userInput;
+      }
+
+      const handleLoad = () => {
+        var userInput, numbers = [];
+        for (let i = 0; i < 4; i++) {
+          numbers[i] = getUserText();
+        }
+        alert(numbers);
+      }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 26 - algo 5</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
