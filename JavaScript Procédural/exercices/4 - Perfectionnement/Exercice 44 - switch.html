@@ -34,9 +34,33 @@
       **********************************
         Reprenez l'exercice précédent en remplaçant les instructions if/else par un switch.
       */
+      const handleLoad = () => {
+        let day;
+        while (isNaN(day) || day < 1 || day > 7) {
+          day = parseInt(prompt('Quel jour de la semaine êtes-vous né ? (1 - 7)'));
+        }
+        
+        switch (day) {
+          case 1:
+            alert("Vous êtes né en début de semaine");
+            break;
+          case 2:
+          case 3:
+          case 4:
+            alert("Vous êtes né en milieu de semaine");
+            break;
+          case 5:
+            alert("Vous êtes né un vendredi");
+            break;
+          case 6:
+          case 7:
+            alert("Vous êtes né un weekend");
+            break;
+        }
+      }
     </script>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>JavaScript : Exercice 44 - switch</h1>
     <p>Premier paragraphe</p>
     <p>Deuxième paragraphe</p>
