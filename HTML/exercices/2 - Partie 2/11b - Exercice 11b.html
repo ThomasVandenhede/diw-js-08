@@ -31,3 +31,39 @@ seul <cite>Un texte</cite> sera en rouge.
 	3 - Le second p contient un cite qui contient un strong.
 	4 - Sans utiliser d'id ou de class ou de style écrit dans la balise, mettez une couleur différente sur chacun des strong.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    strong {
+      color: rosybrown;
+    }
+
+    p > strong {
+      color: hotpink;
+    }
+
+    p > cite > strong {
+      color: burlywood;
+    }
+  </style>
+</head>
+<body>
+  <strong>
+    Lorem, ipsum.
+  </strong>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laudantium natus itaque doloribus <strong>illo</strong> repellendus omnis quam voluptate maiores beatae harum, amet, ut officia incidunt porro sint earum nostrum alias?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. In modi distinctio reiciendis vel totam possimus blanditiis fugiat quas ea! Officia minus nihil repellat cupiditate rem quasi expedita quae aliquam corrupti!<br />
+    <cite>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, quas.<strong>Lorem ipsum dolor sit amet.</strong></cite>
+  </p>
+</body>
+</html>
