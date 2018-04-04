@@ -17,7 +17,7 @@
 
     form p,
     form input[type="button"] {
-      width: 24%;
+      width: 15%;
       display: inline-block;
     }
 
@@ -47,15 +47,29 @@
 </head>
 
 <body>
-  <img src="deco.jpg" / onclick="jeu();">
+  <img src="deco2.jpg" / onclick="jeu();">
   <form name="formulaire" id="formulaire">
     <label>Votre choix :</label>
     <p>
-      <input type="radio" name="reponse" value="pierre" checked> Pierre</p>
+      <input id="rock" type="radio" name="reponse" value="rock" checked>
+      <label for="rock">Pierre</label>
+    </p>
     <p>
-      <input type="radio" name="reponse" value="feuille"> Feuille</p>
+      <input id="paper" type="radio" name="reponse" value="paper">
+      <label for="paper">Papier</label>
+    </p>
     <p>
-      <input type="radio" name="reponse" value="ciseaux"> Ciseaux</p>
+      <input id="scissors" type="radio" name="reponse" value="scissors">
+      <label for="scissors">Ciseaux</label>
+    </p>
+    <p>
+      <input id="lizard" type="radio" name="reponse" value="lizard">
+      <label for="lizard">Lézard</label>
+    </p>
+    <p>
+      <input id="spock" type="radio" name="reponse" value="spock">
+      <label for="spock">Spock</label>
+    </p>
     <input type="button" value="Répondre" onclick="reponse = repondre();">
   </form>
   <div id="resultat"></div>
