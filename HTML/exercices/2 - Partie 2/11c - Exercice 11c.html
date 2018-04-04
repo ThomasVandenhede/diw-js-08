@@ -26,3 +26,40 @@ seul le premier p sera en jaune.
 	3 - Mettez le premier h2 dans une autre couleur.
 	4 - Mettez le premier p suivant le premier h2 dans une autre couleur.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    h2:nth-of-type(1) {
+      color: khaki;
+    }
+
+    h2:nth-of-type(1) + p {
+      color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, incidunt.</h1>
+  <h2>Lorem ipsum dolor sit amet.</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, molestias doloribus obcaecati sequi dicta nulla voluptatibus! Porro numquam aliquid eos autem earum illum, expedita odit molestias eius. Laboriosam, aperiam similique.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis provident molestiae dignissimos, corporis nobis ea corrupti amet perferendis voluptas quas impedit assumenda temporibus excepturi velit optio nulla? Ullam, alias repellat?
+  </p>
+  <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem atque molestias veniam minima nobis! Numquam, fugit veniam magnam dolorum voluptate itaque ut earum molestias, delectus facere consequatur rerum ad.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ipsa voluptates. A fugit tempora sunt sit nemo fuga sequi quo, dolorem sint ex error. Maxime aperiam natus omnis velit quia?
+  </p>
+</body>
+</html>
