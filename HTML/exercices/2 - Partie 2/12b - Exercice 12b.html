@@ -7,3 +7,64 @@ Ainsi, il est possible d'écrire display: block pour qu'une balise soit de type 
 	1 - Reprenez le code de l'exercice précédent.
 	2 - Réalisez le même type d'affichage en inversant les div et les span (chaque span contient une div)
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    div {
+      display: inline-block;
+    }
+
+    span {
+      display: block;
+    }
+
+    span:nth-of-type(1) {
+      color: yellow;
+      background-color: rebeccapurple;
+    }
+
+    span:nth-of-type(1) div {
+      color: rebeccapurple;
+      background-color: yellow;
+    }
+
+    span:nth-of-type(2) {
+      color: teal;
+      background-color: gold;
+    }
+
+    span:nth-of-type(2) div {
+      color: gold;
+      background-color: teal;
+    }
+
+    span:nth-of-type(3) {
+      color: aqua;
+      background-color: slategray;
+    }
+
+    span:nth-of-type(3) div {
+      color: slategray;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <span>
+    Lorem <div>ipsum</div> dolor sit amet consectetur adipisicing elit. Quae labore molestias ipsam tempore illo unde dolorum recusandae amet consequuntur eos inventore est cupiditate possimus quam blanditiis iusto iste, voluptatem non?
+  </span>
+  <span>
+    Lorem ipsum dolor sit amet <div>consectetur</div> adipisicing elit. Quae labore molestias ipsam tempore illo unde dolorum recusandae amet consequuntur eos inventore est cupiditate possimus quam blanditiis iusto iste, voluptatem non?
+  </span>
+  <span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore molestias ipsam tempore illo unde dolorum recusandae amet consequuntur eos inventore est cupiditate possimus <div>quam blanditiis</div> iusto iste, voluptatem non?
+  </span>
+</body>
+</html>
