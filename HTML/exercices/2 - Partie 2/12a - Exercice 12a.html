@@ -10,3 +10,56 @@ Il existe deux balises générales dont le rôle peut varier en fonction de la s
 	2 - Chaque div a une couleur de fond et une couleur de police différente.
 	3 - Dans chaque div changez la couleur d'une partie du texte (fond et police) grâce à la balise span.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    div:nth-of-type(1) {
+      color: yellow;
+      background-color: rebeccapurple;
+    }
+
+    div:nth-of-type(1) span {
+      color: rebeccapurple;
+      background-color: yellow;
+    }
+
+    div:nth-of-type(2) {
+      color: teal;
+      background-color: gold;
+    }
+
+    div:nth-of-type(2) span {
+      color: gold;
+      background-color: teal;
+    }
+
+    div:nth-of-type(3) {
+      color: aqua;
+      background-color: slategray;
+    }
+
+    div:nth-of-type(3) span {
+      color: slategray;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit. Quae labore molestias ipsam tempore illo unde dolorum recusandae amet consequuntur eos inventore est cupiditate possimus quam blanditiis iusto iste, voluptatem non?
+  </div>
+  <div>
+    Lorem ipsum dolor sit, amet <span>consectetur</span> adipisicing elit. Similique veniam nisi necessitatibus, at, corporis eum explicabo doloremque pariatur qui consectetur molestiae rem aperiam, omnis ut enim quas tenetur accusamus facilis?
+  </div>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, iste! Deleniti officiis quod dignissimos saepe rem explicabo iusto, illum eaque nihil omnis a, ratione voluptas <span>debitis corrupti</span> excepturi accusantium est?
+  </div>
+</body>
+</html>
