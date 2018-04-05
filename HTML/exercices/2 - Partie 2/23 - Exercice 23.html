@@ -16,3 +16,44 @@ _ en cadratin (em)
   3 - Modifiez la taille de police par défaut de chaque balise (en pixels).
   4 - Mettez les h1 en italique, les h2 en normal et une partie des paragraphes en gras et italique.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    h1 {
+      font-style: italic;
+      font-size: 72px;
+    }
+
+    h2 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    p:nth-of-type(2n) {
+      font-style: italic;
+    }
+
+    p:nth-of-type(2n+1) {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit amet.</h1>
+  <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi doloremque tempora sit praesentium, expedita fugit alias minima magni nemo quis ab fugiat earum nisi. Adipisci quis perferendis temporibus mollitia.</p>
+  <h1>Nihil, hic! Deserunt, cumque amet!</h1>
+  <h2>Accusantium, laudantium. Ut sit corporis sapiente.</h2>
+  <p>Exercitationem quas id quasi voluptatum magnam explicabo necessitatibus quisquam dolor voluptates minus suscipit quae neque ratione porro, facere obcaecati quibusdam illum quidem dolorem incidunt! Nostrum nobis asperiores porro reprehenderit deleniti!</p>
+</body>
+</html>
