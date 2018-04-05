@@ -6,3 +6,67 @@
 	1 - Reprenez le formulaire de l'exercice précédent.
 	2 - Regroupez le contenu en plusieurs ensembles.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <form action="" type="POST">
+    <fieldset>
+      <label>Titre</label>
+      <input type="radio" id="monsieur" name="titre" checked />
+      <label for="monsieur">M.</label>
+      <input type="radio" id="madame" name="titre" />
+      <label for="madame">Mme</label>
+      <input type="radio" id="mademoiselle" name="titre" />
+      <label for="mademoiselle">Mlle</label><br />
+      <label>Prénom</label>
+      <input type="text" id="prenom"/><br />
+      <label>Nom</label>
+      <input type="text" id="nom"/><br />
+    </fieldset>
+    <fieldset>
+      <label>Voie</label>
+      <input type="text" id="voie"/><br />
+      <label>CodePostal</label>
+      <input type="text" id="CP"/><br />
+      <label>Ville</label>
+      <input type="text" id="ville"/><br />
+    </fieldset>
+    <fieldset>
+      <label for="telephone-type">Type de téléphone</label>
+      <select name="telephone-type" id="telephone-type">
+        <option value="mobile">Mobile</option>
+        <option value="fixe">Fixe</option>
+      </select><br />
+      <label>Téléphone</label>
+      <input type="text" id="telephone"/><br />
+      <label>Email</label>
+      <input type="text" id="email"/><br />
+    </fieldset>
+    <fieldset>
+      <label>Date de Naissance</label>
+      <input type="text" id="birthday"/><br />
+      <label>Site web</label>
+      <input type="text" id="site web"/><br />
+      <label for="">Centres d'intérêt :</label>
+      <input type="checkbox" name="tennis" id="tennis">
+      <label for="tennis">Tennis</label>
+      <input type="checkbox" name="football" id="football">
+      <label for="football">Football</label>
+      <input type="checkbox" name="js" id="js">
+      <label for="js">JS</label>
+      <input type="checkbox" name="html" id="html">
+      <label for="html">HTML</label><br />
+      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    </fieldset>
+    <input type="submit" value="Confirmer">
+  </form>
+</body>
+</html>
