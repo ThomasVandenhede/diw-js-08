@@ -18,3 +18,36 @@ et des listes numérotées :
 	2 - Vous y insérez une liste à puce et une liste numérotée.
 	3 - Dans chaque liste, faites alterner les couleurs entre les éléments impairs et les éléments pairs.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    li:nth-of-type(2n) {
+      color: red;
+    }
+
+    li:nth-of-type(2n+1) {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Lorem, ipsum dolor.</li>
+    <li>Sed, aliquam accusantium!</li>
+    <li>Numquam, delectus in.</li>
+  </ul>
+  <ol>
+    <li>Lorem, ipsum dolor.</li>
+    <li>Deserunt, vitae ullam!</li>
+    <li>Incidunt, inventore tenetur?</li>
+    <li>Rerum, quisquam in.</li>
+  </ol>
+</body>
+</html>
