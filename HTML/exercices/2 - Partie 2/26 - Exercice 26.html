@@ -9,3 +9,38 @@ Dans une liste non ordonnée ou ordonnée, on peut modifier l'apparence des li a
 	4 - Changez le type de puce de cette dernière liste.
 	5 - Masquez la puce de la cinquième entrée de la liste.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    ul > li:nth-of-type(5) {
+      list-style: none;
+    }
+
+    ol {
+      list-style-type: circle;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Lorem, ipsum dolor.</li>
+    <li>Id, dolores repudiandae?</li>
+    <li>
+      <ol>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Corporis, dolor minima.</li>
+        <li>Dignissimos, quos? Pariatur?</li>
+      </ol>
+    </li>
+    <li>Fugiat, incidunt saepe.</li>
+    <li>Cumque, ex esse!</li>
+  </ul>
+</body>
+</html>
