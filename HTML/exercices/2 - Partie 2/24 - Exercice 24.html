@@ -16,3 +16,44 @@ _ text-decoration : texte souligné, texte barré …
 	6 - Le second h2 a un espacement plus grand entre les lettres que la normale.
 	7 - Un paragraphe comporte du texte barré.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    h1:nth-of-type(2) {
+      text-transform: uppercase;
+    }
+
+    h2 {
+      text-align: right;
+    }
+
+    h2:nth-of-type(2) {
+      letter-spacing: 20px;
+    }
+
+    p:nth-of-type(2) {
+      line-height: 2;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+  <h2>Lorem ipsum dolor sit.</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, consequatur. Ea quibusdam nihil dolore aspernatur recusandae repudiandae velit atque accusantium eligendi! Architecto dolorum, consequatur consequuntur veritatis mollitia fugit corporis quis.</p>
+  <h1>Tenetur optio blanditiis cupiditate quas ad.</h1>
+  <h2>Aliquid nemo odit sapiente?</h2>
+  <p>Beatae autem officiis illo deleniti, saepe veritatis vitae quasi, incidunt cumque, necessitatibus distinctio ad inventore quas quam? Quisquam mollitia eaque maxime libero neque, ducimus praesentium, exercitationem ratione odio ab quidem?</p>
+</body>
+</html>
