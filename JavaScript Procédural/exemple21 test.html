@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <script>
+    var maVariableGlobale = 50;
+    var modifierGlobale = function() {
+      maVariableGlobale++;
+    }
+    var modifierLocale = function(a) {
+    var maVariableGlobale = maVariableGlobale + a;
+      return maVariableGlobale;
+    }
+    modifierGlobale();
+    modifierGlobale();
+    modifierGlobale();
+    modifierGlobale();
+
+    var resultat = modifierLocale(5);
+    modifierLocale(1);
+    modifierLocale(99);
+  </script>
+</body>
+</html>
