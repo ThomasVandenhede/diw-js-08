@@ -8,3 +8,60 @@
 	2 - Mettez la première ligne en gras au moyen de la balise thead.
 	3 - Répétez les informations de la première ligne dans une autre ligne située à la base du tableau. Mettez également cette ligne en gras.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    table {
+      border: 10px solid brown;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #333;
+      color: #eee;
+    }
+
+    td, th {
+      border: 1px dotted fuchsia;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <th>ville</th>
+      <th>département</th>
+      <th>région</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nobis, corporis deserunt!</td>
+        <td>Enim, vero quisquam!</td>
+        <td>Necessitatibus, placeat consequatur!</td>
+      </tr>
+      <tr>
+        <td>Vel, libero dolore!</td>
+        <td>Nesciunt, dolorum officiis?</td>
+        <td>Porro, qui dicta!</td>
+      </tr>
+      <tr>
+        <td>Necessitatibus, repellendus expedita!</td>
+        <td>Aut, sit similique.</td>
+        <td>Recusandae, vero temporibus.</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <th>ville</th>
+      <th>département</th>
+      <th>région</th>
+    </tfoot>
+  </table>
+</body>
+</html>
