@@ -15,3 +15,49 @@ Après cela, on utilise la police dans les balises souhaitées au moyen de la d�
 	4 - Créez deux paragraphes.
 	5 - Appliquez une police différente à chaque paragraphe.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    @font-face {
+      font-family: '20_dbregular';
+      src: url('./fonts/20db/20db-webfont.eot');
+      src: url('./fonts/20db/20db-webfont.eot?#iefix') format('embedded-opentype'),
+          url('./fonts/20db/20db-webfont.woff2') format('woff2'),
+          url('./fonts/20db/20db-webfont.woff') format('woff'),
+          url('./fonts/20db/20db-webfont.ttf') format('truetype'),
+          url('./fonts/20db/20db-webfont.svg#20_dbregular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: '2dumbregular';
+      src: url('./fonts/2dumb_regular_macroman/2Dumb-webfont.eot');
+      src: url('./fonts/2dumb_regular_macroman/2Dumb-webfont.eot?#iefix') format('embedded-opentype'),
+          url('./fonts/2dumb_regular_macroman/2Dumb-webfont.woff2') format('woff2'),
+          url('./fonts/2dumb_regular_macroman/2Dumb-webfont.woff') format('woff'),
+          url('./fonts/2dumb_regular_macroman/2Dumb-webfont.ttf') format('truetype'),
+          url('./fonts/2dumb_regular_macroman/2Dumb-webfont.svg#2dumbregular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    p {
+      font-family: '20_dbregular';
+    }
+    p + p {
+      font-family: '2dumbregular';
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, odio recusandae. Repudiandae ipsum iste corrupti quam nihil impedit vero, tempora perspiciatis repellat velit magni amet dolorum voluptates facere cupiditate quo?</p>
+  <p>Sunt suscipit, deleniti fugiat quaerat quisquam dolorum numquam praesentium labore! Eos aspernatur, necessitatibus asperiores modi aliquid rerum reiciendis voluptas distinctio quis error cupiditate fuga, eaque obcaecati? Quam voluptatem totam accusamus?</p>
+</body>
+</html>
