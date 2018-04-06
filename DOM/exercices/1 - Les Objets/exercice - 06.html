@@ -16,27 +16,47 @@
         - Le nombre de bonjour est un nombre (de base on le fixera à 0)
         - Dire bonjour est une fonction.
       */
-      
+      const robot = {
+        serialNumber: '123',
+        model: 'ABABA',
+        name: 'Awesome T2000',
+        color: 'grey',
+        material: 'aluminum',
+        warranty: '10',
+        hiCount: 1,
+        sayHi: function() {
+          console.log('Bonjour humain !');
+        }
+      }
       
       /*
         2. Exécutez la méthode qui permet au robot de dire bonjour. Elle doit entraîner l'affichage d'une boite de dialogue avec le texte 'Bonjour humain !' écrit dedans.
       */
-
+     robot.sayHi();
       /*
         4. Modifiez la méthode dire bonjour pour que le robot incrémente le nombre de bonjour de 1 à chaque fois qu'on exécute la méthode dire bonjour. Vous pouvez utiliser le mot clé this pour accéder à la propriété nombre de bonjour lorsque vous programmez dans la méthode.
       */
-      
+      robot.sayHi = function() {
+        console.log('Bonjour humain !');
+        this.hiCount = this.hiCount + 1;
+      }
       /*
         5. Exécutez 3 fois de suite la méthode dire bonjour et vérifiez dans l'onglet DOM de Firebug (ou d'un autre debugger) que la propriété nombre de bonjour de votre robot à bien été modifiée en conséquence.
       */ 
-      
+      robot.sayHi();
+      robot.sayHi();
+      robot.sayHi();
       /*
         6. Modifiez la méthode dire bonjour pour que le robot affiche une boite de dialogue avec le texte 'Bonjour humain ! Je m\'appelle X' ou X est un mot constitué de la concaténation du modèle et du numéro de série du robot. Vous devez utiliser le mot clé this pour accéder à ses propriétés lorsque vous programmez dans la méthode.
       */
-      
+      robot.sayHi = function() {
+        console.log('Bonjour humain ! Je m\'appelle ' + this.model + this.serialNumber);
+        this.hiCount = this.hiCount + 1;
+      }
       /*
         7. Exécutez la méthode dire bonjour.
       */
+      robot.sayHi();
     </script>
   </head>
   <body>
