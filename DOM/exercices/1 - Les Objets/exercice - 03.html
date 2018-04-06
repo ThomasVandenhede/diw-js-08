@@ -8,11 +8,73 @@
       /*
       1. Dans les exercices de JavaScript "procédural" vous avez créé plusieurs fonctions. Vous devez regrouper toutes ces fonctions (au moins 5 d’entre-elles) dans un objet en JSON. Déclarez un objet dans lequel chaque propriété contiendra une fonction parmi celles créées précédemment.
       */
-      
+      var myFunctions = {
+        sort: (arr) => {
+          for (let i = arr.length - 1; i > 1; i--) {
+            for (let j = 0; j < i; j++) {
+              let a, b;
+              a = arr[j];
+              b = arr[j + 1];
+              if (b < a) {
+                arr[j] = b;
+                arr[j + 1] = a;
+              } else {
+                arr[j] = a;
+                arr[j + 1] = b;
+              }
+            }
+          }
+          return arr;
+        },
+        getAverage: (numbers) => {
+          let total = 0;
+          if (numbers.length) {
+            for (let i = 0; i < numbers.length; i++) {
+              total = total + numbers[i];
+            }
+            return total / numbers.length;
+          }
+        },
+        isLeapYear: (year) => {
+          return !!((!(year % 4) && year % 100) || !(year % 400));
+        },
+        countDigits: () => {
+          let number, absolute;
+          let digits = 1;
+          const base = 10;
+
+          while (!number || isNaN(number)) {
+            number = parseInt(prompt('Saisissez un chiffre'));
+          }
+          
+          if (number < 0) {
+            absolute = number * -1;
+          } else {
+            absolute = number;
+          }
+
+          for (let i = 1; absolute > base ** i; i++) {
+            digits = digits + 1;
+          }
+
+          alert("Le nombre " + number + " comporte " + digits + " chiffres");
+        },
+        test: (num) => {
+          if (num > 10) {
+            alert('Entrée');
+          } else {
+            alert('Sortie');
+          }
+        }
+      }
       /*
       2. Exécutez chacune des méthodes créés dans cet objet pour les tester.
       */
-
+     myFunctions.countDigits();
+     alert(myFunctions.getAverage([1, 2, 3, 4]));
+     alert(myFunctions.isLeapYear(1900));
+     alert(myFunctions.sort([2, 53434, 23, 10, 1002, 103, -6]));
+     myFunctions.test();
       /*
       3. Déclarez 1 objet JSON qui contient :
 
@@ -41,6 +103,29 @@
         - qui RETOURNE 1 objet de 5 propriétés.
       -> Exécutez cette méthode et AFFICHEZ la valeur de la 4ème propriété de la VALEUR DE RETOUR dans une boîte de dialogue.
       */
+     var myObj = {
+       func1: (number) => {
+         alert(number);
+         return number * 100;
+       },
+       func2: (text) => {
+         alert(text);
+         return 'hello !' + text;
+       },
+       func3: (arr) => {
+         alert(arr[1]);
+         arr[1] = arr[2];
+         return arr;
+       },
+       func4: (obj) => {
+         obj.c = obj.a + obj.b + obj.d + obj.e;
+         return obj;
+       }
+     }
+     alert(myObj.func1(2));
+     alert(myObj.func2(' John'));
+     alert(myObj.func3(['a', 'b', 'c']));
+     alert(myObj.func4({a: 1, b: 2, c: 4, d: 10, e: 120}).c);
     </script>
   </head>
   <body>
