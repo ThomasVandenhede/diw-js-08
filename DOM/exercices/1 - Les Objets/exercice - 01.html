@@ -28,30 +28,33 @@
       /*
         2. Quelle est la taille du schmilblick ? Affichez dans une boite de dialogue la taille du schmilblick
       */
-      
+      alert(schmilblick.taille);
       /*
         3. Quelle est la matière dont est composé le schmilblick ? Affichez dans une boite de dialogue la matière du schmilblik
       */
-
+      alert(schmilblick.matiere);
       /*
         4. Quelle est la superficie du schmilblick ? Affichez dans une boite de dialogue la superficie du schmilblik (largeur x longeur)
       */
-
+     alert(schmilblick.dimensions.largeur * schmilblick.dimensions.longueur);
       /*
         5. De quel couleur est le schmilblick ? Affichez successivement dans des boites de dialogue les couleurs du schmilblick.
       */ 
- 
+      for (let couleur of schmilblick.couleurs) {
+        alert(couleur);
+      }
       /*
         6. Le schmilblick peut voler ! Changez la valeur de la propriété peutVoler du schmilblick (sans modifier la déclaration).
       */ 
-      
+      schmilblick.peutVoler = true;
       /*
         7. Le schmilblick est magique ! Ajoutez une propriété estMagique au schmilblick avec comme valeur true (sans modifier la déclaration).
       */
-      
+      schmilblick.estMagique = true;
       /*
         8. Exécutez la méthode queSuisJe du schmilblick.
       */
+     schmilblick.queSuisJe();
     </script>
   </head>
   <body>
