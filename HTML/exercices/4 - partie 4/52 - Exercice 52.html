@@ -6,3 +6,104 @@
 	Reproduisez la capture d'écran Exercice 52a.jpg. Au survol d'une flèche (code html : &rarr;), l'entrée du menu s'affiche ainsi : Exercice 52b.jpg.
   Astuce : mettez la flèche dans un span pour faire un espace avec le texte.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+    
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #3F89A6;
+    }
+
+    h1 {
+      background-color: #215B73;
+      color: #F0B17C;
+      padding: .4em;
+      margin: 0;
+      margin-top: .5em;
+      text-align: center;
+    }
+
+    nav {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 200px;
+      color: #F0B17C;
+      font-family: sans-serif;
+      transform: translate(-160px);
+    }
+    
+    nav ul {
+      padding: 0;
+      margin: 0;
+      padding: 1em .5em;
+      background-color: #215B73;
+      border-radius: 0 1em 1em 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      position: relative;
+      width: 100%;
+      padding: .5em;
+      background-color: inherit;
+      text-transform: uppercase;
+      transition: all .5s ease-in-out;
+    }
+
+    nav ul li:hover {
+      transform: translate(160px);
+    }
+
+    nav ul li span {
+      float: right;
+    }
+
+    main {
+      padding: 1.5em;
+      max-width: 800px;
+      margin-left: 250px;
+      background-color: #F6DDC7;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem, ipsum.</h1>
+  <nav>
+    <ul>
+      <li>Lorem. <span>&rarr;</span></li>
+      <li>Distinctio. <span>&rarr;</span></li>
+      <li>Non. <span>&rarr;</span></li>
+      <li>Est. <span>&rarr;</span></li>
+    </ul>
+  </nav>
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci fuga reiciendis nisi corrupti debitis dolorum voluptatem quos asperiores dolor iure dignissimos ipsam harum sit rem delectus in natus illum, ipsum eligendi sapiente ipsa optio! Facilis assumenda, possimus magni eaque optio reiciendis accusamus dolores sapiente maxime suscipit. Odio ipsa in, delectus officiis alias ex voluptatem eveniet reiciendis voluptates molestias obcaecati vero, distinctio quos voluptate non esse nihil dignissimos fugiat incidunt quasi sit aliquid. Ipsum quia quod labore nisi, eum ipsam quasi ad temporibus similique possimus error illum aliquam unde veritatis incidunt tempora reprehenderit deserunt, odio fuga magnam! Non, assumenda at!</p>
+    <p>Saepe numquam, nesciunt at quae cumque voluptas eaque cupiditate qui consectetur, reiciendis, asperiores expedita temporibus. Suscipit saepe amet reiciendis ipsam deleniti unde quo numquam deserunt. Dolorem consequuntur, quod vero quibusdam eius harum. Beatae est in quo ab, vero nisi ipsum consequuntur ullam excepturi dolores repellat velit pariatur laboriosam consectetur rerum sapiente animi fugit iusto eveniet minus! Possimus ipsam at dolorem, obcaecati provident praesentium. Beatae minus at ipsum quibusdam officiis non vitae minima dolor exercitationem? Blanditiis quaerat numquam officiis magni, in accusamus ea possimus, repellat aperiam iusto autem tenetur culpa sunt molestias officia inventore adipisci architecto nam cumque illum quidem incidunt!</p>
+    <p>Similique, sapiente consequatur molestiae amet fuga earum in provident magni quis quas id unde tenetur accusantium veritatis dolores vitae vero dicta corporis voluptates? Atque veniam exercitationem excepturi consectetur nulla ullam, non nihil similique iure fugiat repellat sapiente maxime! Doloremque odit quam suscipit quod, fugiat voluptatem veniam rerum culpa vitae dicta velit, quia aliquam ipsum ratione cumque temporibus, iure corrupti! Rem beatae quaerat dolor aliquid doloremque quo maiores sunt provident, nemo recusandae voluptates a aperiam. Voluptates ipsum iure asperiores? Quod quisquam quidem sint. Minima tempora assumenda ducimus temporibus quia neque earum aspernatur obcaecati maiores pariatur ab ex, nobis similique hic doloribus!</p>
+  </main>
+</body>
+</html>
