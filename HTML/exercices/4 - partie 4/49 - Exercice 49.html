@@ -6,3 +6,94 @@
 	Reproduisez la capture d'écran Exercice 49.jpg
 	Pour y arriver, il s'agit d'appliquer la propriétée float à des div et de jouer ensuite sur les marges pour créer des espaces entre les div. N'oubliez pas de donner une largeur identique à chaque div. L'image contenue dans chaque bloc a également la propriété float.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-style: italic;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex-basis: 33.33333%;
+      padding: 1em;
+    }
+
+    .card__title > img {
+      float: right;
+    }
+
+    .card__text {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lorem, ipsum dolor.</h1>
+    <div class="cards">
+      <div class="card">
+        <h2 class="card__title">Lorem.<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui iure cum officia non omnis eligendi consequatur, exercitationem dicta doloribus voluptas nobis eum facilis delectus quidem minus accusantium deleniti? Odio necessitatibus doloremque eum? Aperiam voluptatibus ex corrupti exercitationem officia quas voluptatem neque est nisi id beatae, sed reiciendis, sunt totam consequuntur.</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Voluptatem!<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Magni mollitia nesciunt debitis tenetur. Vel obcaecati quisquam est ipsam sapiente possimus fuga deserunt delectus, impedit assumenda, repellendus adipisci sequi. Culpa dolore nam quod eius! Eaque autem odio aspernatur eius! Necessitatibus ipsam pariatur ab soluta numquam cumque repudiandae, dolorum autem vitae consequatur labore nihil inventore corrupti assumenda voluptatum itaque nam.</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Iure!<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Perferendis ipsum laudantium similique recusandae architecto vel quibusdam facere beatae doloribus quidem aut corrupti distinctio libero ea aspernatur, explicabo saepe voluptas veniam aperiam. Ratione, veniam quidem. Eius neque at aliquid officia corrupti esse ipsum facilis ipsam. Vel, odio enim quod quo, ad labore aliquam reprehenderit cumque vero expedita quia iusto!</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Culpa!<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Aperiam, nemo sed? Eligendi deleniti accusantium explicabo? Molestias iusto quod, minus facilis vero suscipit ut obcaecati voluptatibus, qui ad, nihil fugit iure cumque laboriosam perspiciatis recusandae aperiam error delectus eligendi adipisci officiis quaerat eos. Praesentium, excepturi cum deleniti optio, itaque eius consequuntur non dolorum sapiente tempore neque sit quas molestias.</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Laboriosam!<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Voluptatibus facere doloremque quos inventore perferendis reprehenderit quis officia nemo nostrum, soluta, provident impedit est possimus rerum qui debitis earum sit optio, beatae facilis? Molestiae, soluta accusantium ipsum vero nesciunt animi maxime laboriosam facilis assumenda voluptatem reiciendis earum ut nulla aperiam nemo necessitatibus odio aliquid harum rem fugiat eius nisi.</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Sint?<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Officiis, vel a. Quam officiis corrupti quo pariatur nemo, quia facilis ad voluptate consequuntur sequi architecto quis tempora tenetur, aspernatur modi. Fugiat quod at beatae quasi tenetur. Recusandae, ut soluta! Magni, ab aut? Praesentium dolor, quasi, repudiandae ipsum maxime voluptatum veniam vitae hic libero, dolore velit inventore nobis omnis aspernatur?</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Totam.<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Laudantium tempora repellendus illum consequuntur perferendis libero impedit quasi veniam odio eos quibusdam, reprehenderit a eveniet porro animi corrupti voluptates qui doloremque molestiae in omnis placeat aut minima optio. Praesentium ducimus voluptate nam at voluptates ratione consequuntur magnam temporibus in placeat tempora asperiores vero quo aut commodi, provident rem dolore.</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Commodi.<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Doloribus dolorum quia cupiditate ducimus natus quo, eligendi explicabo suscipit dolores, laboriosam sunt voluptas vel ullam eum. Tempora cupiditate nesciunt fuga, pariatur quas quaerat earum, ex modi quasi consequatur est mollitia officia aperiam magni. Repellendus quas enim porro at corrupti dolorem eos, quaerat necessitatibus consectetur? Dicta tempore minima odit obcaecati.</p>
+      </div>
+      <div class="card">
+        <h2 class="card__title">Quos.<img src="../images/smartphones.png" alt=""></h2>
+        <p class="card__text">Magni saepe doloremque voluptates, adipisci explicabo iste asperiores commodi laudantium sunt! Rerum, aliquid aperiam. Quas, aperiam odit. Commodi ea quasi quis natus, velit soluta est. Natus enim repellat nesciunt, vel beatae aliquid in rerum recusandae, modi ratione nihil magni voluptates doloremque aspernatur porro dolorum pariatur debitis dolor eum nobis aliquam.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
