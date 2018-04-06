@@ -14,6 +14,13 @@
       **********************************
         Transformez toutes les boucles des exercices précédents en fonctions récursives.
       */
+      (function rec(i) {
+        if (i < 10) { // condition
+          console.log(i); // mes instructions à exécuter
+          i = i + 1; // incrementation
+          rec(i);
+        }
+      })(0); // initialisation
     </script>
   </head>
   <body>
