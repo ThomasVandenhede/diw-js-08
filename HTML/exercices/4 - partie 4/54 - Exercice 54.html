@@ -14,7 +14,37 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Exercice 54</title>
-		<link rel="stylesheet" href="styles-54.css" type="text/css"/>
+    <link rel="stylesheet" href="styles-54.css" type="text/css"/>
+    <style>
+      #fond {
+        position: relative;
+        margin-top: 210px;
+      }
+
+      #fond:hover #vert {
+        z-index: 2;
+      }
+
+      #vert, #rouge {
+        position: absolute;
+        top: -190px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 120px;
+        width: 120px;
+        border: 30px solid #000;
+        border-radius: 50%;
+      }
+
+      #vert {
+        background-color: green;
+      }
+
+      #rouge {
+        background-color: red;
+      }
+    </style>
 	</head>
 	<body>
 		<div id="page">
