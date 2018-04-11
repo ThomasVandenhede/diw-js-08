@@ -14,14 +14,30 @@
       /*
         1. Écrivez l'algorithme suivant : AU CLIC sur le titre de la première section, renseignez les attributs href ainsi que les attributs title des 2 liens dans les deux paragraphes qui suivent.
       */
+      const handleFirstTitleClick = function() {
+        const firstLink = document.querySelectorAll('a')[0];
+        const secondLink = document.querySelectorAll('a')[1];
 
+        console.log(firstLink, secondLink);
+
+        firstLink.setAttribute('href', 'http://www.google.com');
+        firstLink.setAttribute('title', 'go to google');
+        secondLink.setAttribute('href', 'https://teamliquid.net');
+        secondLink.setAttribute('title', 'go to teamliquid');
+      }
       /*
         2. Écrivez l'algorithme suivant : AU CLIC sur le titre de la deuxième section, mettez une fonction dans l'attribut onclick du deuxième paragraphe de la section.
       */
+      const handleSecondTitleClick = function() {
+        const par = document.querySelector('div:nth-of-type(1) p:nth-of-type(2)');
+        par.onclick = function() {
+          console.log("You have clicked me!");
+        }
+      }
     </script>
   </head>
   <body>
-    <h1>Titre principal</h1>
+    <h1 onclick="handleFirstTitleClick()">Titre principal</h1>
     <ul>
       <li>Premier point</li>
       <li>Deuxième point</li>
@@ -33,7 +49,7 @@
       <p><span>1.2</span>. Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.</p>
     </div>
     <div>
-      <h2><span>2</span>. Titre de la deuxième section</h2>
+      <h2 onclick="handleSecondTitleClick()"><span>2</span>. Titre de la deuxième section</h2>
       <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
       <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
     </div>
