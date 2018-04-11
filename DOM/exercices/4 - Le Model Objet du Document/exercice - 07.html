@@ -14,9 +14,26 @@
       /*
         1. Créez une classe CSS qui spécifie plusieurs propriétés de style pour une <div> correspondant à une section. Ecrivez l'algorithme suivant : AU SURVOL sur une <div>, lui attribuer la classe CSS créée. QUANT ON NE SURVOLE PLUS la <div>, lui retirer la classe CSS créée.
       */
+      const handleLoad = function() {
+        const divs = document.querySelectorAll('div');
+        
+        divs.forEach(function(element) {
+          element.addEventListener('mouseenter', function(e) {
+            element.classList.add('ma-classe');
+          });
+          element.addEventListener('mouseleave', function(e) {
+            element.classList.remove('ma-classe');
+          });
+        })
+      }
     </script>
+    <style>
+      .ma-classe {
+        color: red;
+      }
+    </style>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <h1>Titre principal</h1>
     <ul>
       <li>Premier point</li>
