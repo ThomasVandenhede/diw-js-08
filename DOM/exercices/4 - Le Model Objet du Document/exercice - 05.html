@@ -15,15 +15,22 @@
       1. La méthode .getElementById() de l'objet document prend en argument une chaîne de caractère qui correspond à l'identifiant d'une balise du document Web. Elle retourne une référence vers l'objet correspondant en mémoire. 
       Identifiez une balise du document Web (utilisez l'attribut id). Une fois la balise identifiée, écrivez l'algorithme suivant : AU CHARGEMENT du document, récupérez une référence vers l'objet correspondant à la balise identifiée et affichez cette objet dans la console.
       */
-      
+      let handleLoad = function() {
+        const mainTitle = document.getElementById('main-title');
+        console.log(mainTitle);
+      };
       /*
       2. Vous savez désormais récupérer une référence à l'objet correspondant à une balise identifiée. Identifiez une autre balise du document Web (toujours en utilisant l'attribut id). Une fois la balise identifiée, écrivez l'algorithme suivant : AU CLIC sur le titre principal, récupérez une référence vers l'objet correspondant à la balise identifiée. Cette objet dispose de propriété et de méthode. Affectez à la propriété innerHTML de l'objet correspondant à la balise le texte : 'Ce texte est écrit dans cette balise par mon script'.
       */
+      handleLoad = function() {
+        const myList = document.getElementById('my-list');
+        myList.innerHTML = 'Ce texte est écrit dans cette balise par mon script';
+      }
     </script>
   </head>
-  <body>
-    <h1>Titre principal</h1>
-    <ul>
+  <body onload="handleLoad()">
+    <h1 id="main-title">Titre principal</h1>
+    <ul id="my-list">
       <li>Premier point</li>
       <li>Deuxième point</li>
       <li>Troisième point</li>
