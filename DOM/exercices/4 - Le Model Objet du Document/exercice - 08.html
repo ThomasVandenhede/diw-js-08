@@ -14,13 +14,46 @@
       /*
         1. Écrivez le programme suivant : AU CLIC sur le premier <li> changez la couleur, le poids et la taille de la police du premier <span> du titre de la première section. AU CLIC sur le deuxième <li> changez la couleur, le poids et la taille de la police du premier <span> du titre de la deuxième section. AU CLIC sur le troisième <li> changez la couleur, le poids et la taille de la police du premier <span> du titre de la troisième section.
       */
-      
+      const handleLoad = function() {
+        const lis = document.querySelectorAll('li');
+        lis[0].addEventListener('click', function(e) {
+          document
+            .querySelectorAll('div div')[0]
+            .querySelector('h2 span')
+            .classList.add('my-first-class');
+        });
+        lis[1].addEventListener('click', function(e) {
+          document
+            .querySelectorAll('div div')[1]
+            .querySelector('h2 span')
+            .classList.add('my-second-class');
+        });
+        lis[2].addEventListener('click', function(e) {
+          document
+            .querySelectorAll('div div')[2]
+            .querySelector('h2 span')
+            .classList.add('my-third-class');
+        });
+      }
       /*
         2. Écrivez le programme suivant : AU SURVOL du titre principal, effacez le propriétés de style des 3 <span> des 3 titres de section.
       */
     </script>
+    <style>
+      .my-first-class {
+        color: red;
+      }
+
+      .my-second-class {
+        color: lime;
+      }
+
+      .my-third-class {
+        color: skyblue;
+      }
+    </style>
   </head>
-  <body>
+  <body onload='handleLoad()'>
     <h1>Titre principal</h1>
     <ul>
       <li>Premier point</li>
