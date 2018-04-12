@@ -14,7 +14,7 @@
         - Son réservoir qui est un nombre : 100.
         - Sa couleur qui est un tableau : ['blanc']
       */
-      const concorde = {
+      var concorde = {
         model: 'concode1',
         capacity: 200,
         price: 1000000,
@@ -25,13 +25,13 @@
       /*
         2. Cet objet est l'avion de base tel qu'il est livré. Chaque compagnie aérienne qui achète un avion le personnalise. Utilisez l'objet fondamental Object pour créer un nouvel avion Airbus à partir du prototype. Ce nouvel avion est vendu à Air France. Vous ajouterez une propriété compagnie qui contiendra le nom de la compagnie sous la forme d'une chaîne de caractères.
       */
-      const airbus = Object.setPrototypeOf({}, concorde);
+      var airbus = Object.create(concorde);
       airbus.company = 'Air France';
       console.log(airbus);
       /*
         3. Effectuez la même opération mais pour un avion destiné à British Airways.
       */
-      const british = Object.setPrototypeOf({}, concorde);
+      const british = Object.create(concorde);
       british.company = 'British Airways';
       console.log(british);
     </script>
