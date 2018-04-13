@@ -15,21 +15,22 @@
         1. AU CLIC sur le premier point, utilisez la méthode .createElement() pour créer un objet correspondant à une balise <a>. Utilisez la méthode .createTextNode() pour créer un objet de texte. Utiliser .appendChild() pour attacher l'objet de texte à l'objet correspondant à une balise <a> que vous avez créé. Utilisez la méthode .appendChild pour ajouter cette "branche" à l'arborescence d'objets correspondant au document HTML au niveau du <span> 3.2
         const myLink = document.querySelector('a');
       */
-      window.onload = handleLoad;
-
-      function handleLoad() {
-
-        document.querySelector('ul li').addEventListener('click', (e) => {
+      window.onload = function() {
+        const li = document.querySelector('ul li')
+        
+        li.addEventListener('click', (e) => {
           const myLink = document.createElement('a');
           myLink.setAttribute('href', '#');
           const textNode = document.createTextNode('CLICK THIS!!');
-          const span = document.querySelectorAll('div div p')[1]
-            .querySelector('span');
+          const span = document
+          .querySelectorAll('div div')[2]
+          .querySelectorAll('p')[1]
+          .querySelector('span');
 
           myLink.appendChild(textNode);
           span.appendChild(myLink);
-        })
-      }
+        });
+      };
     </script>
   </head>
   <body>
