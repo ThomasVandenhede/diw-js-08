@@ -16,6 +16,20 @@
       /*
         1. AU CLIC sur le titre principal, utilisez la méthode .createElement() pour créer un objet correspondant à une balise image. Renseignez les propriétés title, alt et src de cet objet. Utilisez appendChild pour ajouter cette balise image dans le <span> 2.2
       */
+      window.onload = function() {
+        const h1 = document.querySelector('h1');
+        h1.addEventListener('click', function() {
+          const img = document.createElement('img');
+          const span = document
+          .querySelectorAll('div div')[1]
+          .querySelectorAll('p')[1]
+          .querySelector('span');
+          img.setAttribute('src', 'coin.jpeg');
+          img.setAttribute('alt', 'coin.jpeg');
+          img.setAttribute('title', 'une pièce');
+          span.appendChild(img);
+        });
+      }
     </script>
   </head>
   <body>
