@@ -23,21 +23,21 @@
 				Information et Divers contiennent chacun un sous-menu. À la fin du chargement du document, modifiez uniquement la couleur du titre des quatre menus sans modifier la couleur des liens des sous-menus.
 				Utilisez balise1 > balise2 et la méthode css().
 			*/
-
+      $(function() {
+        $('nav > ul > li > a').css('color', 'red');
 			/*
 			** 2 **
 			À la fin du chargement du document, modifiez la couleur du h2 Un autre titre.
 				Utilisez balise1 + balise2 et la méthode css().
 			*/
-
+        $('section > h2:eq(1)').css('color', 'yellow');
 			/*
 			** 3 **
 			À la fin du chargement du document, modifiez la couleur des deux paragraphes en-dessous du trait.
 				Utilisez balise1 ~ balise2 et la méthode css().
 			*/
-
-
-
+        $('hr ~ p').css('color', 'pink');
+      });
 		</script>
 	</head>
 	<body>
