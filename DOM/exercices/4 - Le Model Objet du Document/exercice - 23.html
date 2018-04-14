@@ -11,29 +11,121 @@
       /*
         L'objectif de cet exercice est d'apprendre à dessiner dans une balise Canvas
       */
-
+    
       /*
         1. Créez une balise <canvas>. Vous devez impérativement renseigner ses attributs width et height.
       */
-
+      
       /*
         2. Créez l'algorithme suivant : Quand on clique sur un paragraphe de texte, on déclenche un script qui récupère une référence à l'objet <canvas> (en utilisant la méthode .getElementById() par exemple). Vérifier à l'aide de la méthode .log() de la console que vous arrivez à récupérer un objet de type HTMLCanvasElement
       */
-
+      window.onload = function() {
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            console.log(canvas);
+          });
+        });
+      };
       /*
         L'objet correspondant à la balise <canvas> dispose d'une méthode .getContext() qui vous permet de récupérer un autre objet adapté au dessin 2d dans ce contexte. Voir la MDN ici : https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D
       */
-  
+      window.onload = function() {
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            console.log(canvas);
+          });
+        });
+      };
       /*
         3. Créez l'algorithme suivant : Quand on clique sur un paragraphe de texte, on déclenche un script qui récupère une référence à l'objet <canvas> (en utilisant la méthode .getElementById() par exemple) et qui récupère le contexte de dessin 2d pour dessiner un carré dans le canvas.
       */
- 
+      window.onload = function() {
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            console.log(canvas, ctx);
+          });
+        });
+      };
       /*
         4. Créez l'algorithme suivant : Quand on clique sur un paragraphe de texte, on déclenche un script qui récupère une référence à l'objet <canvas> (en utilisant la méthode .getElementById() par exemple) puis qui récupère le contexte de dessin 2d; qui efface de précédents dessins du contexte de dessin 2d;  qui dessine un carré avec un décalage de 2 pixels par rapport à la dernière fois qu'on a cliqué.
       */
+      window.onload = function() {
+        let x = 0;
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle='red';
+            ctx.fillRect(x, 0, 50, 50);
+            x += 2;
+          });
+        });
+      };
       /*
         5. Créez un dessin animé à l'aide window.setTimeout(), puis avec window.setInterval() et enfin avec window.requestAnimationFrame()
       */
+      window.onload = function() {
+        let x = 0;
+        let dx = 2;
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            function draw() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              ctx.fillStyle='red';
+              ctx.fillRect(x, 0, 50, 50);
+              x += dx;
+            }
+            setInterval(draw, 100);
+          });
+        });
+      };
+      window.onload = function() {
+        let x = 0;
+        let dx = 2;
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            function draw() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              ctx.fillStyle='red';
+              ctx.fillRect(x, 0, 50, 50);
+              x += dx;
+              setTimeout(draw, 100);
+            }
+            draw();
+          });
+        });
+      };
+      window.onload = function() {
+        let x = 0;
+        let dx = 2;
+        document.querySelectorAll('p').forEach(el => {
+          el.addEventListener('click', function() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            function draw() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              ctx.fillStyle='red';
+              ctx.fillRect(x, 0, 50, 50);
+              x += dx;
+              requestAnimationFrame(draw);
+            }
+            draw();
+          });
+        });
+      };
     </script>
   </head>
   <body>
@@ -60,5 +152,8 @@
         <p><span>3.2</span>. Deuxième paragraphe de la troisième section et un <a href="#">lien</a>.</p>
       </div>
     </div>
+    <canvas id="canvas" width="300" height="150">
+
+    </canvas>
   </body>
 </html>
