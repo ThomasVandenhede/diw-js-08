@@ -15,11 +15,11 @@
       /*
         1. Créez une <div> qui aura pour identifiant ascenseur. Doter cette <div> de styles CSS de telle sorte qu'elle soit visible par l'utilisateur (carré rouge par exemple). Cette <div> doit être positionnée en absolute.
       */
- 
+      const elevator = document.createElement('div');
+      elevator.setAttribute('id', 'elevator');
       /*
         Lorsqu'on confie une fonction au gestionnaire d'évènement du navigateur Internet, celui-ci l'exécute toujours en lui transmettant en paramètre un objet contenant les caractéristiques de l'évènement survenu. C'est pourquoi on peut écrire :
       */
-
       window.onload = function(unObjetFourni){
         unObjetFourni; //ceci est la variable contenant l'objet fourni par le gestionnaire d'évènement à la fonction déclenchée par le navigateur lorsqu'il à fini de charger le document en mémoire.
       };
@@ -31,13 +31,23 @@
       /*
         2. Au Chargement du document, attachez une fonction à l'évènement DOMMouseScroll en utilisant la méthode .addEventListener(). Cette fonction doit déclencher l'affichage d'une boite de dialogue avec le texte : 'This is a magic scroll'.
       */
+      window.onload = function() {
+        document.body.appendChild(elevator);
+        window.addEventListener('wheel', function(e) {
+          e.preventDefault();
 
+          const elevatorTop = parseFloat(window.getComputedStyle(elevator).top);
+          // const elevatorLeft = parseFloat(window.getComputedStyle(elevator).left);
+          elevator.style.top =  elevatorTop - e.deltaY + 'px';
+          // elevator.style.left =  elevatorLeft - e.deltaX + 'px';
+        });
+      }
       /*
-        3. Modifiez cette fonctans uion pour afficher dne boite de dialogue la propriété .detail contenue dans l'objet d'évènement fourni à chaque fois qu'on scroll. Cette propriété contient le décalage de la molette.
+        3. Modifiez cette fonction pour afficher dans une boite de dialogue la propriété .detail contenue dans l'objet d'évènement fourni à chaque fois qu'on scroll. Cette propriété contient le décalage de la molette.
       */
 
       /*
-        4. Modifiez cette fonction pour la <div> se décale en fonction de la valeur de la propriété .detail 
+        4. Modifiez cette fonction pour que la <div> se décale en fonction de la valeur de la propriété .detail 
       */
 
       //Compatibilité Inter Navigateur
@@ -45,7 +55,7 @@
         - L'évènement concernant le scroll de souris s'appelle 'DOMMouseScroll' sur FF.
         - L'évènement concernant le scroll de souris s'appelle 'mousewheel' sur IE9, Chrome, Safari, Opera.
         - La méthode .addEventListener() n'existe pas sur IE 6/7/8 et l'évènement concernant le scroll de souris s'appelle 'onmousewheel' sur ces navigateurs.
-
+          console.log(elevator.style.top);
         - L'information concernant le décalage de la molette qu'on trouve dans l'objet fourni par le gestionnaire d'évènement sur IE s'appelle .wheelDelta (la propriété .detail n'existe pas)
 
         5. Tenez compte des informations précédentes pour modifier votre script de telle sorte qu'il fonctionne sur IE 8,9,10; FF, Chrome, ...
@@ -53,6 +63,20 @@
         Astuce : vous pouvez tester l'existence d'une propriété effectuant une comparaison avec undefined.
       */
     </script>
+    <style>
+      body {
+        position: relative;
+      }
+
+      #elevator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+      }
+    </style>
   </head>
   <body>
     <h1>Titre principal</h1>
