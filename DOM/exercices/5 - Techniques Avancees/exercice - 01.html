@@ -14,32 +14,47 @@
       1. Créez un objet en JSON qui contient 3 méthodes.
       */
       var myObject = {
-        firstMethod: 'first method',
-        secondMethod: 'second method',
+        firstMethod() {
+          console.log('first method');
+          return this;
+        },
+        secondMethod() {
+          console.log('second method');
+          return this;
+        },
+        thirdMethod() {
+          console.log('third method');
+          return this;
+        },
       }
       /*
-      2. Comment obtient-on, dans une méthode, une référence à l'objet contenant la méthode ? Retournez cette référence à partir de chacune des méthodes. 
+      2. Comment obtient-on, dans une méthode, une référence à l'objet contenant la méthode ? Retournez cette référence à partir de chacune des méthodes.
       */
-      
+      console.log(myObject.firstMethod());
+      console.log(myObject.secondMethod());
+      console.log(myObject.thirdMethod());
       /*
       3. Exécutez les 3 méthodes sur UNE SEULE ligne.
       */
-
+      console.log(myObject.firstMethod().secondMethod().thirdMethod());
       /*
       4. Créez une fonction usine qui retourne l'objet.
       */
-
+      function factory(obj) {
+        return obj;
+      }
       /*
       5. Exécutez la fonction usine et les 3 méthodes sur UNE SEULE ligne.
       */
-
+      factory(myObject).firstMethod().secondMethod().thirdMethod();
       /*
       6. Renommez votre fonction usine avec le caractère $ et exécutez la fonction usine et les 3 méthodes sur une seule ligne.
       */
-
+      const $ = factory;
       /*
       7. Vous venez de comprendre un mécanisme de base de la librairie jQuery !
       */
+      console.log('jQuery-like : ' + $(myObject).firstMethod());
     </script>
   </head>
   <body>
