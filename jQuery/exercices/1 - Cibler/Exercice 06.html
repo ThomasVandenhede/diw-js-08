@@ -25,20 +25,27 @@
 			À la fin du chargement du document, changez la couleur du h2 contenant 'Titre' ainsi que son texte.
 				Utilisez :contains().
 			*/
-
+      $(function() {
+        $("h2:contains('Titre')")
+        .css({'color': 'red'})
+        .text('Nouveau Titre');
 			/*
 			** 2 **
 				La méthode html peut renvoyer le contenu d'une balise. À la fin du chargement du document, récupérez le texte de l'article et insérez le dans la balise p vide.
 				Utilisez html() et :empty.
 			*/
-
+        $('p:empty').html($('article').html());
 			/*
 			** 3 **
 			À la fin du chargement du document, modifiez la couleur de fond et la hauteur des entrées des sous-menus.
 				Utilisez :has() et css.
 			*/
-
-
+        $('nav ul li:has(ul) ul li')
+        .css({
+          'background-color': 'darkGrey',
+          'height': '100px'
+        });
+      });
 		</script>
 	</head>
 	<body>
