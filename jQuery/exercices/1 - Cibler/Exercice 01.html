@@ -20,16 +20,19 @@
 			** 1 **
 				Visez la balise h1. Affichez dans l'objet renvoyé dans la console.
 			*/
-
+      $(function(){
+        console.log($('h1'));
 			/*
 			** 2 **
 				À l'aide de la méthode html(), affichez dans une boite de dialogue le texte du h1.
 			*/
-
+        console.log($('h1').html());
 			/*
 			** 3 **
 				Faites la même chose pour les paragraphes ? Quel résultat obtenez-vous, pourquoi ?
 			*/
+        console.log($('p').html()); // html ne renvoit que le contenu du premier élément
+      });
 		</script>
 	</head>
 	<body>
