@@ -25,19 +25,26 @@
 			À la fin du chargement du document, dans le menu, mettez en minuscule toutes les entrées sauf ACCUEIL;
 				Utilisez :not() et css().
 			*/
-
+      $(function() {
+        $('nav ul li a:not(:contains(Accueil))')
+        .css('text-transform', 'lowercase');
 			/*
 			** 2 **
 			À la fin du chargement du document, dans les sous-menu, changez la couleur de fond des éléments impairs.
 				Utilisez :even et css().
 			*/
-
+        $('nav ul li ul li:even')
+        .css('background-color', 'green');
 			/*
 			** 3 **
 			À la fin du chargement du document, modifiez deux propriétés css des titres.
 				Utilisez :header et css().
 			*/
-
+        $(':header').css({
+          'border': '1px solid red',
+          'font-family': 'monospace',
+        });
+      });
 		</script>
 	</head>
 	<body>
