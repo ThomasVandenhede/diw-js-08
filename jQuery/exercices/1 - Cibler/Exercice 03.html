@@ -26,25 +26,27 @@
 			À la fin du chargement du document, affichez dans une boite de dialogue le contenu du second paragraphe de l'article.
 				Utilisez la méthode html().
 			*/
-
+      $(function() {
+        alert($('article p:eq(1)').html());
 			/*
 			** 2 **
 			À la fin du chargement du document, affichez dans une boite de dialogue la couleur du troisième paragraphe de la section.
 				Utilisez la méthode css().
 			*/
-
+        alert($('section p:eq(2)').css('color'));
 			/*
 			** 3 **
 			À la fin du chargement du document, affichez dans une boite de dialogue  la hauteur du second paragraphe de la section.
 				Utilisez la méthode css().
 			*/
-
+        alert($('section p:eq(1)').css('height'));
 			/*
 			** 4 **
 			À la fin du chargement du document, affichez dans une boite de dialogue  le contenu du second lien du nav.
 				Utilisez la méthode html().
 			*/
-
+        alert($('nav ul li:eq(1) a').html());
+      });
 		</script>
 	</head>
 	<body>
