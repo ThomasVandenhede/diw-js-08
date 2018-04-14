@@ -24,12 +24,15 @@
 				À la fin du chargement du document, affichez dans une boite de dialogue le texte de la balise h2 contenu dans l'article.
 				Utilisez la méthode html().
 			*/
-
+      $(function() {
+        alert($('article h2').html());
 			/*
 			** 2 **
 				À la fin du chargement du document, affichez dans une boite de dialogue le texte du premier paragraphe de la section.
 				Utilisez la méthode html().
 			*/
+        alert($('section p').html());
+      });
 		</script>
 	</head>
 	<body>
