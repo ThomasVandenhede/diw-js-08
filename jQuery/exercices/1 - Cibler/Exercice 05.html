@@ -28,20 +28,21 @@
 			À la fin du chargement du document, changez la couleur des liens des sous-menus.
 				Utilisez :first-child.
 			*/
-
+      $(function() {
+        $('nav > ul > li > ul > li:first-child > a').css('color', 'red');
 			/*
 			** 2 **
 			À la fin du chargement du document, changez la couleur du premier paragraphe de la section et de l'article.
 				Utilisez :first-of-type.
 			*/
-
+        $('section p:first-of-type, article p:first-of-type').css('color', 'yellow');
 			/*
 			** 3 **
 			À la fin du chargement du document, changez la taille de la police de l'avant-dernier lien des sous-menus.
 				Utilisez nth-last-child().
 			*/
-
-
+        $('nav > ul > li > ul > li:nth-last-child(2) > a').css('font-size', '50px');
+      })
 		</script>
 	</head>
 	<body>
@@ -56,21 +57,21 @@
 						</li>
 						<li>
 							<a href="">Information</a>
-								<ul>
-									<li><a href="">Un</a></li>
-									<li><a href="">Deux</a></li>
-									<li><a href="">Trois</a></li>
-									<li><a href="">Quatre</a></li>
-									<li><a href="">Cinq</a></li>
-								</ul>
+              <ul>
+                <li><a href="">Un</a></li>
+                <li><a href="">Deux</a></li>
+                <li><a href="">Trois</a></li>
+                <li><a href="">Quatre</a></li>
+                <li><a href="">Cinq</a></li>
+              </ul>
 						</li>
 						<li>
 							<a href="">Divers</a>
-								<ul>
-									<li><a href="">Un</a></li>
-									<li><a href="">Deux</a></li>
-									<li><a href="">Trois</a></li>
-								</ul>
+              <ul>
+                <li><a href="">Un</a></li>
+                <li><a href="">Deux</a></li>
+                <li><a href="">Trois</a></li>
+              </ul>
 						</li>
 						<li>
 							<a href="">Autre</a>
