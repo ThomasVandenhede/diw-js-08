@@ -15,11 +15,53 @@
       /*
         1. Créez un <div> qui aura pour identifiant lechat. Doter cette <div> de styles CSS de telle sorte qu'elle soit visible par l'utilisateur (avec en fond une photo de petit chat par exemple). Cette <div> doit être positionnée en absolute.
       */
+      window.onload = function() {
+        let dx = 0, dy = 0;
+        let mouseX = 0, mouseY = 0;
+        const cat = document.createElement('div');
+        
+        function updateCatPosition() {
+          const catRect = cat.getBoundingClientRect();
+          const centerX = catRect.x + catRect.width / 2;
+          const centerY = catRect.y + catRect.height / 2;
+          dx = .1 * (mouseX - centerX);
+          dy = .1 * (mouseY - centerY);
+          cat.style.left = catRect.x + dx + 'px';
+          cat.style.top = catRect.y + dy + 'px';
+        }
 
+        cat.setAttribute('id', 'lechat');
+        document.body.appendChild(cat);
+
+        window.addEventListener('mousemove', function(e) {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        setInterval(updateCatPosition, 100);
+      }
       /*
         2. Chercher sur la MDN ici : https://developer.mozilla.org/fr/docs/Web/API/MouseEvent quelles sont les propriétés disponible dans l'objet d'évènement fourni par le navigateur Internet que vous pouvez utiliser pour connaître la position de la souris. Utilisez les notions vues dans l'exercice précédent pour créer un code compatible IE6/7/8/9/10; FF, Chrome, ... qui donne vie au chat.
       */
     </script>
+    <style>
+      body {
+        position: relative;
+      }
+
+      #lechat {
+        width: 150px;
+        height: 100px;
+        background-image: url('cat.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <h1>Titre principal</h1>
