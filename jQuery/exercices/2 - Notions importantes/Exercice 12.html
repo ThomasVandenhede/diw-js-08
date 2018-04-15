@@ -19,27 +19,52 @@
 				Créez une class pour styler les paragraphes. À la fin du chargement du document, ajoutez cette class au second paragraphe de la section.
 				Utilisez attr().
 			*/
+      $(function() {
+        const myClass = 'my-class';
 
+        $('section p:eq(1)').attr('class', myClass);
 			/*
 			** 2 **
 				À la fin du chargement du document, créez un nouveau lien dans la balise div#message. Ajoutez à ce lien un titre ayant pour texte le titre de la page.
 				Utilisez html() et attr.
 			*/
-
+        const $message = $('div#message');
+        const $newLink = $('<a href=#>');
+        $newLink
+        .html('mon lien')
+        .attr('title', document.title)
+        $message.html($newLink);
 			/*
 			** 3 **
 				À la fin du chargement du document, créez un nouvel objet Date. À partir de cet objet, affichez dans la div#message le jour de la semaine sous forme textuelle.
 				Utilisez l'objet Date, la méthode getDay de l'objet Date et html().
 			*/
-
+        const now = new Date();
+        weekdays = [
+          'dimanche',
+          'lundi',
+          'mardi',
+          'mercredi',
+          'jeudi',
+          'vendredi',
+          'samedi',
+        ]
+        $message.html(weekdays[now.getDay()]);
 			/*
 			** 4 **
 				À la fin du chargement du document, créez un nouvel objet Date. À partir de cet objet, affichez dans le bouton submit, le texte du bouton suivi  "le [jour de la semaine]" où [jour de la semaine] correspond au jour de la semaine sous forme textuelle.
 				Utilisez l'objet Date, la méthode getDay de l'objet Date et attr().
 			*/
-
+        const $submitButton = $("input[type=submit]");
+        const submitValue = $submitButton.attr("value");
+        const newSubmitValue = submitValue + " le " + weekdays[now.getDay()];
+        $submitButton.attr("value", newSubmitValue);
+      });
 		</script>
 		<style>
+      .my-class {
+        color: fuchsia;
+      }
 		</style>
 	</head>
 	<body>
