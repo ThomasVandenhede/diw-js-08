@@ -19,14 +19,17 @@
 				À la fin du chargement du document, changez la valeur sélectionnée dans le select.
 				Utilisez val().
 			*/
-
+      $(function() {
+        $('select').val('boulevard');
 			/*
 			** 2 **
 				Vous pouvez passez plusieurs valeurs dans val() au moyen d'un tableau. À la fin du chargement du document, changez l'attribut du select pour permettre la sélection multiple et changez la valeur sélectionnée dans le select en choisissant deux valeurs.
 				Utilisez attr() et val().
 			*/
-
-
+        $('select')
+        .attr('multiple', true)
+        .val(['avenue', 'impasse']);
+      });
 		</script>
 	</head>
 	<body>
