@@ -27,19 +27,27 @@
 			À la fin du chargement du document, entourez tous les input de type texte du formulaire avec un trait plein.
 				Utilisez [attribut='valeur'] et css().
 			*/
-
+      $(function() {
+        $("input[type='text']").css('border', '1px solid red');
 			/*
 			** 2 **
 			À la fin du chargement du document, changez la couleur et soulignez les liens visant une adresse débutant par la lettre a.
 				Utilisez [attribut^='valeur'] et css().
 			*/
-
+        $("a[href^=a]").css({
+          'color': 'yellow',
+          'text-decoration': 'underline',
+        });
 			/*
 			** 3 **
 			À la fin du chargement du document, modifiez la largeur et la couleur de fond des input nom et prénom.
 				Utilisez [attribut*='valeur'] et css().
 			*/
-
+        $("input[name*='nom']").css({
+          'width': '200px',
+          'backgroundColor': 'pink'
+        });
+      });
 		</script>
 	</head>
 	<body>
