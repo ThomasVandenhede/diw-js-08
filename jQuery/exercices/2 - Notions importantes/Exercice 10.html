@@ -21,23 +21,37 @@
 				Créez un class pour styler les paragraphes. À la fin du chargement du document, ajoutez cette class au second paragraphe de la section.
 				Utilisez addClass().
 			*/
-
+      $(function() {
+        const parClass1 = 'custom-par1';
+        $("section p:eq(1)").addClass(parClass1);
 			/*
 			** 2 **
 				Créez une second class pour styler des paragraphes. À la fin du chargement du document, ajoutez cette class aux premier et troisième paragraphe de la section.
 				Utilisez addClass().
 			*/
-
+        const parClass2 = 'custom-par2';
+        $("section p:eq(0), section p:eq(2)")
+        .addClass(parClass2);
 			/*
 			** 3 **
 				Deux secondes après la fin du chargement du document, enlevez les deux class créées.
 				Utilisez removeClass().
 			*/
-
-
+        setTimeout(() => {
+          $('section p').removeClass(parClass1 + ' ' + parClass2);
+        }, 2000);
+      });
 		</script>
 		<style>
+      .custom-par1 {
+        color: pink;
+        font-size: 24px;
+      }
 
+      .custom-par2 {
+        text-decoration: underline;
+        border: 3px dashed green;
+      }
 		</style>
 	</head>
 	<body>
