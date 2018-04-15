@@ -27,20 +27,32 @@
 				À la fin du chargement du document, ajoutez du texte dans la div#message et modifiez la couleur du texte affiché.
 				Utilisez html() et css().
 			*/
-		
-
+      $(function() {
+        const $message = $("div#message");
+        $message
+        .html('lorem ipsum')
+        .css('color', 'cyan');
 			/*
 			** 2 **
 				Deux secondes après le chargement du document , ajoutez un autre texte et modifiez l'apparence de ce texte.
 				Utilisez setTimeout, html() et css().
 			*/
-
+        setTimeout(() => {
+          $message
+          .html($message.html() + 'un autre texte')
+          .css('background-color', 'orange');
+        }, 2000);
 			/*
 			** 3 **
 				Quatre secondes après le chargement du document, vous devez récupérer le texte de la div#message, lui ajouter un autre texte et modifier l'apparence de ce texte.
 				Utilisez setTimeout, html() et css().
 			*/
-			
+        setTimeout(() => {
+          $message
+          .html($message.html() + 'encore un peu de texte')
+          .css('font-size', '40px');
+        }, 4000);
+      });
 		</script>
 	</head>
 	<body>
