@@ -26,7 +26,22 @@
 
         Utilisez les méthodes resize(), css(), addClass() et removeClass().
       */
+      $(function() {
+        $(window).resize(() => {
+          const bodyWidth = parseFloat($('body').css('width'));
+          const $paragraphs = $('p');
 
+          if (bodyWidth <= 920) {
+            $paragraphs.addClass('full-width');
+          }
+          if (bodyWidth <= 640) {
+            $('body').addClass('font-small');
+          }
+          if (bodyWidth >= 920) {
+            $('body').removeClass('font-small');
+            $paragraphs.removeClass('full-width');
+          }
+        });
       /*
       ** 2 **
         À la fin du chargement du document, prévoyez le script suivant :
@@ -35,8 +50,43 @@
 
         Utilisez les méthodes scroll() et css().
       */
+        const $img = $("<img src='sponge_bob.jpeg'>");
+        $img.addClass('fixed-left-middle');
+        $('body').append($img);
 
-		</script>
+        let intervalID;
+        $(window).scroll(() => {
+          clearTimeout(intervalID);
+          $img.css('visibility', 'visible');
+          invervalID = setTimeout(() => {
+            $img.css('visibility', 'hidden');
+          }, 1000);
+        });
+      });
+    </script>
+    <style>
+      .font-small {
+        font-size: .6rem;
+      }
+
+      .full-width {
+        width: 100%;
+      }
+
+      .fixed-left-middle {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        visibility: hidden;
+      }
+
+      .visible {
+        visibility: visible;
+      }
+    </style>
 	</head>
 	<body>
 		<div id="page">
