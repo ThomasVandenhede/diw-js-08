@@ -17,11 +17,35 @@
 			***********************************
 				Reprenez le code de l'exercice précédent en remplaçant addClass et removeClass par toggleClass(). Pour ce faire, factorisez votre code dans une fonction appelée à deux reprises.
 			*/
+      $(function() {
+        const parClass1 = 'custom-par1';
+        const parClass2 = 'custom-par2';
+        const $sectionParagraphs = $("section p");
 
+        function toggleParClass(el, className) {
+          console.log(el);
+          el.toggleClass(className);
+        }
+        
+        toggleParClass($sectionParagraphs.eq(1), parClass1);
+        toggleParClass($sectionParagraphs.filter(':eq(0), :eq(2)'), parClass2);
 
+        setTimeout(() => {
+          toggleParClass($sectionParagraphs.eq(1), parClass1);
+          toggleParClass($sectionParagraphs.filter(':eq(0), :eq(2)'), parClass2);
+        }, 2000);
+      });
 		</script>
 		<style>
+      .custom-par1 {
+        color: pink;
+        font-size: 24px;
+      }
 
+      .custom-par2 {
+        text-decoration: underline;
+        border: 3px dashed green;
+      }
 		</style>
 	</head>
 	<body>
