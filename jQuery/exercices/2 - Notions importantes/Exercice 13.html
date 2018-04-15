@@ -20,13 +20,18 @@
 				À la fin du chargement du document, modifiez le texte et le lien de la première entrée du menu.
 				Utilisez text() et attr().
 			*/
-
+      $(function() {
+        $('nav li:first-of-type a')
+        .text('la bite à dudule')
+        .attr('href', 'https://www.youtube.com/watch?v=02bgq3FbH3I');
 			/*
 			** 2 **
 				À la fin du chargement du document, désactivez les champs input sauf le champ téléphone.
 				Utilisez attr() et removeAttr().
 			*/
-
+        $('input').attr('disabled', true);
+        $("input[type='tel']").removeAttr('disabled');
+      });
 		</script>
 	</head>
 	<body>
