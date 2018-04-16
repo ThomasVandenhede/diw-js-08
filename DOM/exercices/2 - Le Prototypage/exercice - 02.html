@@ -18,7 +18,16 @@
         - Leur genre (mâle ou femelle) qui est une chaîne de caractères;
         - L'action de barrir qui est une méthode.
       */
-
+      var Mammoth = function(age, weight, sex) {
+        this.age = age;
+        this.weight = weight;
+        this.species = 'Mammoth';
+        this.hasFur = true;
+        this.sex = sex;
+        this.trumpet = function() {
+          console.log('tuuuuutt!');
+        };
+      };
       /*
         2. Les éléphants contemporains héritent probablement des caractéristiques d'un mammouth qui est leur prototype. Écrivez une fonction constructeur qui permet de construire des objets représentant des éléphants. Les éléphants ont deux caractéristiques qui différent des mammouths :
         - Leur poids qui est un nombre;
@@ -26,10 +35,27 @@
         - Le fait qu'ils n'aient pas de fourrure, qui est un booléen;
         - L'action de manger des cacahuètes qui est une méthode.
       */
-      
+      var Elephant = function(age, weight, sex) {
+        this.age = age;
+        this.weight = weight;
+        this.sex = sex;
+        this.species = 'Elephant';
+        this.hasFur = false;
+        this.eatPeanut = function() {
+          console.log('scrunch scrunch');
+        }
+      };
+
+      Elephant.prototype = new Mammoth(300, 2500, 'male');
+      Elephant.prototype.constructor = Elephant;
+
       /*
         3. Créez 2 éléphants. Vous devez pouvoir exécuter la méthode qui leur permet de barrir et qui provient de leur prototype et, exécuter la méthode qui leur permet de manger des cacahuètes et qui leur est propre.
       */
+      var babar = new Elephant(23, 500, 'male');
+      var dumbo = new Elephant(4, 240, 'male');
+      babar.trumpet();
+      dumbo.trumpet();
     </script>
   </head>
   <body>
