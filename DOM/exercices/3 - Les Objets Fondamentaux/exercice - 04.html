@@ -12,7 +12,7 @@
       /*
         1. Crééz un nouvel objet de type Date dans la mémoire.
       */
-      const date = new Date();
+      // const date = new Date();
       /*
         2. Ci-après consultez la liste des méthodes de l'objet construit avec Date à cette adresse http://www.commentcamarche.net/contents/571-javascript-l-objet-date (en bas de page).
       */
@@ -20,11 +20,23 @@
       /*
         3. Utilisez l'objet créé pour afficher dans une boite de dialogue le nombre d'heures, de minutes et de secondes avant la fin du cours à (17:00:00)
       */
-      const diff = Math.abs(new Date('2018/04/11 17:00:00') - date);
-      const hours = Math.floor(diff / 3.6e6);
-      const minutes = Math.floor((diff - hours * 3.6e6) / 6e4);
-      const seconds = Math.floor((diff - hours * 3.6e6 - minutes * 6e4) / 1000);
-      alert("Temps restant avant la fin du cours : " + hours + ' hours, ' + minutes + ' minutes and ' + seconds + ' seconds');
+      // const diff = Math.abs(new Date('2018/04/11 17:00:00') - date);
+      // const hours = Math.floor(diff / 3.6e6);
+      // const minutes = Math.floor((diff - hours * 3.6e6) / 6e4);
+      // const seconds = Math.floor((diff - hours * 3.6e6 - minutes * 6e4) / 1000);
+      let now, end, diff;
+      now = Date.now();
+
+      end = new Date();
+      end.setHours('17');
+      end.setMinutes('00');
+      end.setSeconds('00');
+      end = end.getTime();
+
+      diff = new Date();
+      diff.setTime(diff.getTimezoneOffset() * 60000 + end - now);
+      
+      alert("Temps restant avant la fin du cours : " + diff.getHours() + ' hours, ' + diff.getMinutes() + ' minutes and ' + diff.getSeconds() + ' seconds');
     </script>
   </head>
   <body>
