@@ -22,12 +22,17 @@
         
         function updateCatPosition() {
           const catRect = cat.getBoundingClientRect();
-          const centerX = catRect.x + catRect.width / 2;
-          const centerY = catRect.y + catRect.height / 2;
+          centerX = catRect.left + catRect.width / 2;
+          centerY = catRect.top + catRect.height / 2;
           dx = .1 * (mouseX - centerX);
           dy = .1 * (mouseY - centerY);
-          cat.style.left = catRect.x + dx + 'px';
-          cat.style.top = catRect.y + dy + 'px';
+          cat.style.left = catRect.left + dx + 'px';
+          cat.style.top = catRect.top + dy + 'px';
+          if (dx >= 0) {
+            cat.style.transform = 'scaleX(1)';
+          } else {
+            cat.style.transform = 'scaleX(-1)';
+          }
         }
 
         cat.setAttribute('id', 'lechat');
@@ -47,12 +52,14 @@
     <style>
       body {
         position: relative;
+        min-height: 100vh;
+        cursor: url("mouse_small.png"), pointer;
       }
 
       #lechat {
         width: 150px;
         height: 100px;
-        background-image: url('cat.jpeg');
+        background-image: url('cat1.gif');
         background-size: contain;
         background-repeat: no-repeat;
         position: fixed;
