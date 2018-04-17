@@ -17,7 +17,29 @@
       /*
         1. Implémentez le préchargement d'un image de très grande taille (+ de 10 Mo). Pensez à désactiver le cache ou le vider entre chaque essai pour que l'exercice soit pertinent
       */
+      window.onload = function() {
+        var img, imgContainer, loadingSpinner;
+        imgContainer = document.createElement('div');
+        imgContainer.setAttribute('id', 'img-container');
+        document.body.append(imgContainer);
+        
+        loadingSpinner = document.createElement('img');
+        loadingSpinner.setAttribute('src', 'spinner.gif');
+        imgContainer.append(loadingSpinner);
+
+        img = document.createElement("img");
+        img.src = "Pizigani_1367_Chart_10MB.jpg";
+        img.addEventListener('load', function() {
+          imgContainer.innerHTML = '';
+          imgContainer.append(img);
+        });
+      }
     </script>
+    <style>
+      img {
+        width: 500px;
+      }
+    </style>
   </head>
   <body>
     <h1>Titre principal</h1> 
