@@ -40,8 +40,22 @@
       /*
       4. Créez une fonction usine qui retourne l'objet.
       */
-      function factory(obj) {
-        return obj;
+      function factory() {
+        var myObject = {
+          firstMethod() {
+            console.log('first method');
+            return this;
+          },
+          secondMethod() {
+            console.log('second method');
+            return this;
+          },
+          thirdMethod() {
+            console.log('third method');
+            return this;
+          },
+        }
+        return myObject;
       }
       /*
       5. Exécutez la fonction usine et les 3 méthodes sur UNE SEULE ligne.
@@ -54,7 +68,7 @@
       /*
       7. Vous venez de comprendre un mécanisme de base de la librairie jQuery !
       */
-      console.log('jQuery-like : ' + $(myObject).firstMethod());
+      console.log('jQuery-like : ' + $().firstMethod());
     </script>
   </head>
   <body>
