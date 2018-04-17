@@ -16,12 +16,24 @@
         - Son râle qui est une action qui affiche une boîte de dialogue avec un cri horrible !
         NE CHARGEZ PAS ce fichier dans le document Web. Le fantôme n'existe pas ici.
       */
-
+      
       /*
         2. AU CLICK sur un élément HTML du document Web, crééz dans le DOM une balise script avec pour fichier source le fichier .js que vous avez créé. Vous donner la valeur true à la propriété .async de l'objet représentant la balise script. AU Chargement de votre balise script, exécutez une fonction que vous avez créé. Cette fonction exécute la méthode qui affiche le râle du fantôme.
         La documentation de la balise script sur le MDN est accessible ici : https://developer.mozilla.org/fr/docs/Web/HTML/Element/script
       */
+      window.onload = function() {
+        var h1 = document.querySelector('h1');
+        h1.addEventListener('click', function() {
+          var script = document.createElement('script');
+          script.setAttribute('src', 'ghost.js');
+          script.setAttribute('async', true);
+          document.body.append(script);
 
+          script.onload = function() {
+            ghost.makeScarySound();
+          };
+        });
+      };
       /*
       * Vous avez chargé votre script de façon asynchrone à la demande.
       */
@@ -32,10 +44,28 @@
         - La fonction fournie est appelée dans le jargon des développeur un callback (littéralement, une fonction qui sera appelée plus tard).
         - La fonction à créer est généralement appelée "require" ou "define".
       */
+      function require(filename, cb) {
+        var script = document.createElement('script');
+        script.setAttribute('src', filename + '.js');
+        script.setAttribute('async', true);
+        document.body.append(script);
+        script.onload = function() {
+          cb();
+        };
+      }
 
+      window.onload = function() {
+        var h1 = document.querySelector('h1');
+        h1.addEventListener('click', function() {
+          require('ghost', function() {
+            ghost.makeScarySound();
+          });
+        });
+      }
       /*
       * Vous venez de créer une fonction pour AMD ! Vous pouvez utilisez la librairie http://requirejs.org/ pour bénéficier d'un boîte à outil pour les AMD qui prend en compte un la compatibilité inter navigateurs, un ensemble d'optimisation et de bonnes pratiques pour la gestion des AMD.
       */
+     // YAY !!!
     </script>
   </head>
   <body>
