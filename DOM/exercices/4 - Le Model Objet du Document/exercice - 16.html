@@ -14,38 +14,88 @@
       /*
         1. Que fait le code ci-dessous ? Au chargement du document, lorsqu'on presse une touche, on récupère le code correspondant à la touche. Selon ce code, on affiche une boite de dialogue. Essayez ce code.
       */
-
       window.onload = function(){
-        
+        var dx = 15;
+        var dy = 15;
+        var masque = document.querySelector('.masque');
+        var masqueLeft = window.getComputedStyle(masque).left;
+        var sprite = document.querySelector('.sprite');
+        var spriteSize = {
+          width: 52,
+          height: 43,
+        }
+        var leftKeyDown = false;
+        var rightKeyDown = false;
+        var intervalID;
+
+        function animateLeft() {
+          var masqueLeft = window.getComputedStyle(masque).left;
+          var spriteTop = window.getComputedStyle(sprite).top;
+          masque.style.transform = 'scaleX(-1)';
+          masque.style.left = parseFloat(masqueLeft) - dx + 'px';
+          sprite.style.top = (parseFloat(spriteTop) - spriteSize.height) % 215 + 'px';
+        }
+
+        function animateRight() {
+          var masqueLeft = window.getComputedStyle(masque).left;
+          var spriteTop = window.getComputedStyle(sprite).top;
+          masque.style.transform = 'scaleX(1)';
+          masque.style.left = parseFloat(masqueLeft) + dy + 'px';
+          sprite.style.top = (parseFloat(spriteTop) - spriteSize.height) % 215 + 'px';
+        }
+
         window.onkeydown = function(event){
-
           var code = event.keyCode;
+          console.log(leftKeyDown, rightKeyDown);
 
-          switch(code){
+          switch(code) {
             case 37:
-              //*instructions*
-              alert('gauche');
-              
-            break;
+              // left
+              if (rightKeyDown) {
+                rightKeyDown = false;
+                clearInterval(intervalID);
+              }
+              if (!leftKeyDown) {
+                leftKeyDown = true;
+                intervalID = setInterval(animateLeft, 60);
+              }
+              break;
             case 38:
-              //instructions
-              alert('haut');
-              
-            break;
+              masque.style.top = parseFloat(masqueTop) - dy + 'px';
+              sprite.style.top = parseFloat(masqueTop) + spriteSize.height + 'px';
+              break;
             case 39:
-              //instructions
-              alert('droite');
-              
-            break;
+              // right
+              if (leftKeyDown) {
+                leftKeyDown = false;
+                clearInterval(intervalID);
+              }
+              if (!rightKeyDown) {
+                rightKeyDown = true;
+                console.log('right key down');
+                intervalID = setInterval(animateRight, 60);
+              }
+              break;
             case 40:
-              //instructions
-              alert('bas');
-              
-            break;
+              masque.style.top = parseFloat(masqueTop) + spriteSize.height + 'px';
+              break;
           };
-
         };
 
+        window.onkeyup = function(event) {
+          var code = event.keyCode;
+
+          switch(code) {
+            case 37:
+              leftKeyDown = false;
+              clearInterval(intervalID);
+              break;
+            case 39:
+              rightKeyDown = false;
+              clearInterval(intervalID);
+              break;
+          }
+        };
       };
       
       /*
@@ -55,15 +105,15 @@
       /*
         1. Cherchez un sprite sur Google. Chargez le sprite dans le document Web ci-contre. Paramétrez les styles de la div masque pour que une seule décomposition de mouvement du sprite soit visible (utilisez la propriété de style overflow:hidden). La div doit être en position absolute. L'img dans la div doit être en position absolute.
       */
-
+      // OK !
       /*
         2. En utilisant comme base le code fourni, lorsque je presse une direction, déclenchez du code Javascript (dans la zone avec le sigle *instructions*) qui va déplacer de 2px dans cette direction la div masque.
       */
-
+      // OK !
       /*
         3. En utilisant comme base le code fourni, lorsque je presse la même direction, déclenchez du code Javascript (dans la zone avec le sigle *instructions*) qui va déplacer l'img dans le masque dans la direction opposée au déplacement précédent pour afficher la décomposition suivante du mouvement.
       */
-
+     
       /*
         4. Reproduire cela pour les directions restantes.
       */
@@ -72,12 +122,27 @@
         5. Trouvez le code numérique qui correspond à la touche "entrée". Dans le cas ou l'utilisateur appuie sur la touche entrée, affichez un "mouvement spécial" de votre sprite (coup d'épée, explosion, etc... ou autre). L'événement contraire de onkeydown est onkeyup. Inspirez vous du code fourni pour faire en sorte que lorsque l'utilisateur relâche la touche entrée, le sprite revienne à son état initial.
       */
     </script>
+    <style>
+      .masque {
+        position: absolute;
+        border: 1px solid red;
+        width: 47px;
+        height: 43px;
+        overflow: hidden;
+      }
+
+      .sprite {
+        position: absolute;
+        top: -3px;
+        left: -160px;
+      }
+    </style>
   </head>
   <body>
     <h1>Play !</h1>
     <div>
       <div id="container" class="masque" >
-        <img id="contenu" class="sprite"/>
+        <img id="contenu" class="sprite" src="megaman7.png" />
       </div>
     </div>
     <noscript>
