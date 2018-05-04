@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>AngularJS : Les Expressions : Exercice 2</title>
-    <script>
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS : Les Expressions : Exercice 2</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script>
       // Énoncé
       /* La directive ng-init */
       /**************************************************************************************************
@@ -32,17 +34,28 @@
       /*
         5. A l'aide d'une expression, affichez à l'intérieur de la div le nom de votre classe avec sa spécialité sur une même ligne. Affichez sur une autre ligne le nombre d'inscrits de votre classe.
       */
-    </script>
-  </head>
-  <body>
-    <div>
-      <h4>Promotion</h4>
-      <p>Quelle est ma promotion ?</p>
-    </div>
-    <div>
-      <h4>Classe</h4>
-      <p>Quelle est l'intitulé de ma formation ? </p>
-      <p>Quel est le nombre d'inscrits dans ma formation ?</p>
-    </div>
-  </body>
+  </script>
+</head>
+
+<body>
+  <div ng-init="promotions = [2014, 2015, 2016, 2017, 2018]">
+    <h4>Promotion</h4>
+    <p>Quelle est ma promotion ? {{ promotions[promotions.length - 1] }}</p>
+  </div>
+  <div ng-init="class = {name: 'DIW JS 08', specialty: 'code', enrolledCount: 10}">
+    <h4>Classe</h4>
+    <p>Quelle est l'intitulé de ma formation ? {{ class.name + ' ' + class.specialty
+      }}
+    </p>
+    <p>Quel est le nombre d'inscrits dans ma formation ? {{ class.enrolledCount }}</p>
+  </div>
+</body>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    angular.module('angularjsExercice2', []);
+    angular.bootstrap(document, ['angularjsExercice2'], { strictDi: true })
+  })
+</script>
+
 </html>
