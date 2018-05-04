@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+</head>
+
+<body class="ng-cloak">
+  <p>{{ 2 + 2 }}</p>
+
+  <p>{{ classe = "DIWJS 08" }}</p>
+  <p>{{ myArr = ['café', 'calva', 'sieste'] }}</p>
+  <p>{{ myArr[2] }}</p>
+  <p ng-init="classDiwJS = ['Benoït', 'Wendy', 'Thomas']">
+    {{ classDiwJS[0] }}
+  </p>
+  <ng-hide ng-hide="false">TROP NUL</ng-hide>
+  <ng-show ng-show="true">TROP COOL</ng-show>
+
+  <script>
+    angular.module('moduleAvecDesDirectives', []);
+    angular.bootstrap(document, [], { strictDi: true });
+  </script>
+</body>
+
+</html>
