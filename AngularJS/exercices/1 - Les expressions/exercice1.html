@@ -1,25 +1,35 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>AngularJS : Les Expressions : Exercice 1</title>
-    <script>
-      // Énoncé
-      /* Les expressions triviales */
-      /*
-        1. Chargez Angular JS dans ce document. Le contexte applicatif d'Angular JS doit englober tout le document. Votre application s'appellera angularjsExercice1. Un tutoriel officiel sur le chargement d'Angular JS est disponible ici : https://docs.angularjs.org/tutorial/step_00. Vous pouvez vous aider du fichier exercice0.png fourni en annexe.
-      */
 
-      /*
-        2. Complétez les paragraphes de texte du document Web (répondez aux questions) avec l'EXPRESSION Angular JS qui convient. Le fichier exercice0.png contient la liste des expressions que vous pouvez utiliser. La documentation officielle concernant les expressions est disponible ici : https://docs.angularjs.org/guide/expression
-      */
-    </script>
-  </head>
-  <body>
-    <p>Que donne la somme de 36344.789 et 5422.995432 ?</p>
-    <p>Que donne &laquo; Bonjour &raquo; et &laquo; le Monde &raquo; ?</p>
-    <p>Quel est le reste de la division entière de 4321 par 1234 ?</p>
-    <p>Est-il vrai que 0.000005 est strictement supérieur à 0.00005 ?</p>
-    <p>Que donne l'équation ((3x + 2) - (43x * (9y + 6))) / (2y - 7) avec x = 4 et y = 19 (vous devez commencer par déclarer les 2 variables) ?</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS : Les Expressions : Exercice 1</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script>
+    // Énoncé
+    /* Les expressions triviales */
+    /*
+      1. Chargez Angular JS dans ce document. Le contexte applicatif d'Angular JS doit englober tout le document. Votre application s'appellera angularjsExercice1. Un tutoriel officiel sur le chargement d'Angular JS est disponible ici : https://docs.angularjs.org/tutorial/step_00. Vous pouvez vous aider du fichier exercice0.png fourni en annexe.
+    */
+    window.addEventListener('DOMContentLoaded', function () {
+      angular.module('angularjsExercice1', []);
+      angular.bootstrap(document, ['angularjsExercice1'], { strictDi: true })
+    })
+    /*
+      2. Complétez les paragraphes de texte du document Web (répondez aux questions) avec l'EXPRESSION Angular JS qui convient. Le fichier exercice0.png contient la liste des expressions que vous pouvez utiliser. La documentation officielle concernant les expressions est disponible ici : https://docs.angularjs.org/guide/expression
+    */
+  </script>
+</head>
+
+<body>
+  <p>Que donne la somme de 36344.789 et 5422.995432 ? {{ 36344.789 + 5422.995432 }}</p>
+  <p>Que donne &laquo; Bonjour &raquo; et &laquo; le Monde &raquo; ? {{ "&laquo;Bonjour
+    &raquo;" + "&laquo; le Monde &raquo;" }}</p>
+  <p>Quel est le reste de la division entière de 4321 par 1234 ? {{ 4321 % 1234 }}</p>
+  <p>Est-il vrai que 0.000005 est strictement supérieur à 0.00005 ?</p>
+  <p>Que donne l'équation ((3x + 2) - (43x * (9y + 6))) / (2y - 7) avec x = 4 et y
+    = 19 (vous devez commencer par déclarer les 2 variables) ? {{ x = 4; y = 19;
+    ((3 * x + 2) - (43 * x * (9 * y + 6))) / (2 * y - 7) }}</p>
+</body>
+
 </html>
